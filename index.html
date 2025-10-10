@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lumen | Главная </title>
+    <script src="/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__wrapper">
+          <a class="header__logo logo" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+            </svg>
+            <h1>lumen.</h1>
+          </a>
+          <button class="header__button burger-button button button--accent" type="button" data-js-cat-button="">
+            <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+              <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+              <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+              <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+            </svg><span>Каталог</span>
+          </button>
+          <div class="header__catalog catalog" data-js-cat-menu="">
+            <nav class="catalog-nav">
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/code">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml">
+                      <path d="m18 16 4-4-4-4"></path>
+                      <path d="m6 8-4 4 4 4"></path>
+                      <path d="m14.5 4-5 16"></path>
+                    </svg><span>Программирование</span>
+                  </a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/analytic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-icon lucide-chart-column">
+                      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                      <path d="M18 17V9"></path>
+                      <path d="M13 17V5"></path>
+                      <path d="M8 17v-3"></path>
+                    </svg><span>Аналитика</span>
+                  </a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/games">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-icon lucide-chart-column">
+                      <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                      <path d="M18 17V9"></path>
+                      <path d="M13 17V5"></path>
+                      <path d="M8 17v-3"></path>
+                    </svg><span>Игры</span>
+                  </a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid-icon lucide-layout-grid">
+                      <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                      <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                      <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                      <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+                    </svg><span>Все курсы</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <nav class="header__menu hidden-tablet">
+          <ul class="header__menu-list" data-js-menu-list="">
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/courses"><span>Курсы</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/"><span>Результаты</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/"><span>Отзывы</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/"><span>Контакты</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero container section">
+        <div class="section__body">
+          <div class="hero__grid grid">
+            <div class="grid__column grid__column--large">
+              <div class="grid__content grid__content--main">
+                <div class="hero__slider slider" data-js-slider="{&quot;sliderParams&quot;:{&quot;slidesPerView&quot;:1,&quot;slidesPerGroup&quot;:1,&quot;loop&quot;:true,&quot;autoplay&quot;:{&quot;delay&quot;:5000,&quot;pauseOnMouseEnter&quot;:true,&quot;disableOnInteraction&quot;:true}},&quot;navigationTargetElementId&quot;:null}">
+                  <div class="slider__swiper swiper" data-js-slider-swiper="">
+                    <ul class="slider__list swiper-wrapper">
+                      <li class="slider__item swiper-slide">
+                        <div class="hero__slider-card default-card">
+                          <div class="default-card__description">
+                            <h3 class="default-card__title">Освойте профессию с нуля</h3>
+                            <p class="default-card__subtitle">Приходите учиться сейчас, чтобы уже зимой искать первую работу.</p>
+                          </div>
+                          <div class="default-card__actions">
+                            <a class="default-card__button button button--accent" href="/"><span>Начать учиться</span></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider__item swiper-slide">
+                        <div class="hero__slider-card default-card">
+                          <div class="default-card__description">
+                            <h3 class="default-card__title">Индивидуальный подход к каждому</h3>
+                            <p class="default-card__subtitle">Наши преподаватели всегда помогут</p>
+                          </div>
+                          <div class="default-card__actions">
+                            <a class="default-card__button button button--accent" href="/"><span>Начать учиться</span></a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="slider__navigation slider-navigation" data-js-slider-navigation="">
+                    <button class="slider-navigation__arrow-button slider-navigation__arrow-button--previous  button" title="Previous slide" aria-label="Previous slide" type="button" data-js-slider-previous-button="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slider-nagivation__button-icon">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                      </svg>
+                    </button>
+                    <button class="slider-navigation__arrow-button slider-navigation__arrow-button--next  button" title="Next slide" aria-label="Next slide" type="button" data-js-slider-next-button="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slider-navigation__button-icon">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__content grid__content--side">
+                <a class="grid__content-card link-card link-card--link" href="/">
+                  <div class="link-card__body">
+                    <header class="link-card__header">
+                      <h3 class="link-card__title">Курсы</h3>
+                    </header>
+                    <footer class="link-card__footer">
+                      <button class="link-card__button button button--accent" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </footer>
+                  </div>
+                  <img class="link-card__image" src="/assets/images/dark.jpg">
+                </a>
+                <a class="grid__content-card link-card link-card--link" href="/">
+                  <div class="link-card__body">
+                    <header class="link-card__header">
+                      <h3 class="link-card__title">Контакты</h3>
+                    </header>
+                    <footer class="link-card__footer">
+                      <button class="link-card__button button button--accent" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </footer>
+                  </div>
+                  <img class="link-card__image" src="/assets/images/dark.jpg">
+                </a>
+                <a class="grid__content-card link-card link-card--link" href="/">
+                  <div class="link-card__body">
+                    <header class="link-card__header">
+                      <h3 class="link-card__title">Отзывы</h3>
+                    </header>
+                    <footer class="link-card__footer">
+                      <button class="link-card__button button button--accent" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </footer>
+                  </div>
+                  <img class="link-card__image" src="/assets/images/dark.jpg">
+                </a>
+              </div>
+            </div>
+            <div class="grid__column grid__column--small">
+              <div class="grid__content grid__content--side">
+                <a class="grid__content-card link-card link-card--link" href="/">
+                  <div class="link-card__body">
+                    <header class="link-card__header">
+                      <h3 class="link-card__title">Результаты</h3>
+                    </header>
+                    <footer class="link-card__footer">
+                      <button class="link-card__button button button--accent" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </footer>
+                  </div>
+                  <img class="link-card__image" src="/assets/images/dark.jpg">
+                </a>
+                <a class="grid__content-card link-card link-card--link" href="/">
+                  <div class="link-card__body">
+                    <header class="link-card__header">
+                      <h3 class="link-card__title">О компании</h3>
+                    </header>
+                    <footer class="link-card__footer">
+                      <button class="link-card__button button button--accent" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right">
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </footer>
+                  </div>
+                  <img class="link-card__image" src="/assets/images/dark.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features container section">
+        <header class="section__header">
+          <div class="section__description">
+            <h2 class="section__title">Программы</h2>
+            <p class="section__subtitle">Выберите лучшее для себя. Если не можете определиться - мы поможем</p>
+          </div>
+        </header>
+        <div class="section__body">
+          <div class="features__tabs tabs" data-js-tabs="{}">
+            <div class="tabs-navigation" role="tablist" aria-labelledby="features-tabs-title" data-js-tabs-navigation="">
+              <h3 class="visualliy-hidden" id="features-tabs-title"></h3>
+              <div class="tabs-navigation__button is-active" role="tab" id="популярное-tab" aria-selected="true" tabindex="0" data-js-tabs-button=""><span class="tabs-navigation__button-text">Популярное</span></div>
+              <div class="tabs-navigation__button" role="tab" id="it-tab" aria-selected="false" tabindex="-1" data-js-tabs-button=""><span class="tabs-navigation__button-text">IT</span></div>
+              <div class="tabs-navigation__button" role="tab" id="бизнес-tab" aria-selected="false" tabindex="-1" data-js-tabs-button=""><span class="tabs-navigation__button-text">Бизнес</span></div>
+            </div>
+            <div class="tabs__body">
+              <div class="tabs__content is-active" aria-labelledby="популярное-tab" tabindex="0" data-js-tabs-content="">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Программист Python</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/python.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Веб-дизайнер</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/designer.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Нейросети: полный курс</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/ai.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Графический дизайнер</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/graphic.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Разработчик игр на Unity</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/unity.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Интернет-маркетинг</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/marketing.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__content" aria-labelledby="it-tab" tabindex="0" data-js-tabs-content="">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Специалист 1С</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/1c.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Бизнес-аналитик</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/analytic.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Программист Python</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/python.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Разработчик игр на Unity</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/unity.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs__content" aria-labelledby="бизнес-tab" tabindex="0" data-js-tabs-content="">
+                <ul class="features__list">
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Специалист 1С</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/1c.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Бизнес-аналитик</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/analytic.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Бухгалтерия</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/accounting.png">
+                    </a>
+                  </li>
+                  <li class="features__list-item">
+                    <a class="course-card" href="/">
+                      <div class="course-card__body">
+                        <header class="course-card__header">
+                          <p class="course-card__subtitle">Профессия</p>
+                        </header>
+                        <footer class="course-card__footer">
+                          <h3 class="course-card__title">Веб-дизайнер</h3>
+                          <p class="course-card__duration">9 месяцев</p>
+                        </footer>
+                        <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      </div>
+                      <img class="course-card__image" src="/assets/images/designer.png">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team container section">
+        <header class="section__header">
+          <div class="section__description">
+            <h2 class="section__title">Команда</h2>
+            <p class="section__subtitle">Познакомьтесь с нашими преподавателями</p>
+          </div>
+          <div class="section__actions">
+            <div class="slider-navigation slider-navigation--circle" id="team-slider-navigation" data-js-slider-navigation="">
+              <button class="slider-navigation__arrow-button slider-navigation__arrow-button--previous  button button--circle button--accent" title="Previous slide" aria-label="Previous slide" type="button" data-js-slider-previous-button="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slider-nagivation__button-icon">
+                  <path d="m12 19-7-7 7-7"></path>
+                  <path d="M19 12H5"></path>
+                </svg>
+              </button>
+              <div class="slider-navigation__pagination" data-js-slider-pagination=""></div>
+              <button class="slider-navigation__arrow-button slider-navigation__arrow-button--next  button button--circle button--accent" title="Next slide" aria-label="Next slide" type="button" data-js-slider-next-button="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slider-navigation__button-icon">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="section__body">
+          <div class="team__slider slider" data-js-slider="{&quot;sliderParams&quot;:{&quot;slidesPerView&quot;:4.3,&quot;slidesPerGroup&quot;:1.3,&quot;spaceBetween&quot;:20,&quot;breakpoints&quot;:{&quot;390&quot;:{&quot;slidesPerView&quot;:2.3,&quot;slidesPerGroup&quot;:2,&quot;spaceBetween&quot;:15},&quot;430&quot;:{&quot;slidesPerView&quot;:2.3,&quot;slidesPerGroup&quot;:2,&quot;spaceBetween&quot;:15},&quot;768&quot;:{&quot;slidesPerView&quot;:2.3,&quot;slidesPerGroup&quot;:3,&quot;spaceBetween&quot;:15},&quot;1024&quot;:{&quot;slidesPerView&quot;:4.3,&quot;slidesPerGroup&quot;:4,&quot;spaceBetween&quot;:20},&quot;1280&quot;:{&quot;slidesPerView&quot;:4.3,&quot;slidesPerGroup&quot;:4,&quot;spaceBetween&quot;:25}}},&quot;navigationTargetElementId&quot;:&quot;team-slider-navigation&quot;}">
+            <div class="slider__swiper swiper" data-js-slider-swiper="">
+              <ul class="slider__list swiper-wrapper">
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item swiper-slide">
+                  <div class="team__card team-card">
+                    <img class="team-card__image" src="/assets/images/employee.jpg">
+                    <div class="team-card__description">
+                      <h3 class="team-card__title">Александра Никитина</h3>
+                      <p class="team-card__subtitle">Frontend-разработчик</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb">
+          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+          <path d="M9 18h6"></path>
+          <path d="M10 22h4"></path>
+        </svg>
+        <h1>lumen.</h1>
+      </a>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Направления</h3>
+        <ul class="footer__category-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/code">Программирование</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/analytic">Аналитика</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/games">Игры</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Курсы</h3>
+        <ul class="footer__program-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Веб-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Нейросети: полный курс</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Графический дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Интернет-маркетинг</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бухгалтерия</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Веб-дизайнер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">о lumen</h3>
+        <ul class="footer__menu-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses">Курсы</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Результаты</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Отзывы</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
