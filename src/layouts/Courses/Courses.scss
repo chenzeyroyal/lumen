@@ -1,0 +1,62 @@
+/* src/components/Courses.scss — дополняем ваш файл */
+.courses__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+  justify-content: space-between;
+
+  .filters__subcategories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-subcategory {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      accent-color: inherit;
+    }
+  }
+
+  .filters__period {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .filters__period-range {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    input[type="range"] {
+      width: 160px;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 6px;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.04)
+      );
+      cursor: pointer;
+    }
+  }
+}
+
+/* класс, который скрывает слайд */
+.courses__slide--hidden {
+  display: none !important;
+}

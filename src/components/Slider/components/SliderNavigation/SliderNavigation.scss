@@ -1,0 +1,23 @@
+.slider-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+
+  &__pagination {
+    display: flex;
+    column-gap: 3px;
+
+    &-bullet {
+      width: 15px;
+      height: 3px;
+      background-color: var(--color-grey);
+      transition-duration: var(--transition-duration);
+      border-radius: var(--border-radius-m);
+
+      &.is-active {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

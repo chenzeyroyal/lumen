@@ -1,0 +1,110 @@
+.header {
+  --column-gap: 20px;
+
+  position: sticky;
+  z-index: var(--z-index-header);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 10px;
+  background-color: var(--color-white);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+  border-bottom: var(--border-width-s) solid transparent;
+
+  @keyframes scrolling-header {
+    to {
+      border-color: var(--color-grey);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: var(--column-gap);
+  }
+
+  .catalog {
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    border-radius: var(--border-radius-l);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-duration) ease-in-out,
+      max-width var(--transition-duration) ease-in-out;
+    box-shadow: var(--shadow);
+    z-index: var(--z-index-dropdown);
+
+    &.is-active {
+      max-height: 1000px;
+      max-width: 1000px;
+    }
+
+    &-nav {
+      padding: 20px;
+
+      svg {
+        color: var(--color-accent);
+      }
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 25px;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-link {
+      width: 100%;
+
+      @include hover {
+        background-color: var(--color-grey);
+      }
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 5px;
+    }
+
+    &-item {
+      position: relative;
+    }
+
+    &-link {
+      @include hover {
+        background-color: var(--color-grey-02);
+      }
+    }
+  }
+}

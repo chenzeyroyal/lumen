@@ -1,0 +1,27 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--section-padding-y);
+  row-gap: 40px;
+
+  &--inner {
+    @include mobile {
+      row-gap: 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 30px;
+  background-color: var(--color-grey-04);
+  color: var(--color-white);
+  padding: 30px;
+
+  @include mobile {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .logo {
+    align-items: baseline;
+  }
+
+  &__column {
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+  }
+
+  &__column-title {
+    h3 {
+      margin: 0;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__link {
+    transition: opacity var(--transition-duration);
+
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+}

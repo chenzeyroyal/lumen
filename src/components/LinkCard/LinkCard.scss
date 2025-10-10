@@ -1,0 +1,46 @@
+.link-card {
+  position: relative;
+  border-radius: var(--border-radius-l);
+  flex-grow: 1;
+  overflow: hidden;
+
+  &__subtitle {
+    font-weight: 500;
+  }
+
+  &__description {
+    transition: max-height var(--transition-duration-m) ease-in-out,
+      opacity var(--transition-duration-m) ease-in-out;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  &__body {
+    z-index: var(--z-index-under-background);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-l);
+    transition: scale var(--transition-duration) ease-in-out,
+      filter var(--transition-duration) ease-in-out;
+  }
+
+  @include hover {
+    .link-card__image {
+      scale: 1.1;
+    }
+    .link-card__button {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+}

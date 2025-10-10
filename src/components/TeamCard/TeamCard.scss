@@ -1,0 +1,15 @@
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  padding: 20px;
+
+  &__description {
+    text-align: center;
+  }
+  &__image {
+    border-radius: var(--border-radius-l);
+  }
+}

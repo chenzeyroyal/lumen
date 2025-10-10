@@ -1,0 +1,63 @@
+.tabs-navigation {
+  --tabsActiveButtonWidth: 0;
+  --tabsActiveButtonOffsetLeft: 0;
+  --tabsNavigationPadding: #{fluid-to-laptop(10, 8)};
+  --tabsNavigationButtonPadding: #{fluid-to-laptop(14, 12)
+    fluid-to-laptop(24, 20)};
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tabsNavigationPadding);
+  background-color: var(--color-grey-03);
+  border-radius: var(--border-radius-xl);
+  column-gap: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--tabsNavigationPadding);
+    left: 0;
+    width: var(--tabsActiveButtonWidth);
+    height: calc(100% - var(--tabsNavigationPadding) * 2);
+    background-color: var(--color-black);
+    border-radius: var(--border-radius-xl);
+    transition-duration: var(--transition-duration);
+    translate: var(--tabsActiveButtonOffsetLeft);
+  }
+
+  &__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--tabsNavigationButtonPadding);
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+    border-radius: var(--border-radius-xl);
+    user-select: none;
+
+    &-text {
+      z-index: var(--z-index-under-background);
+    }
+
+    &:not(.is-active) {
+      @include hover {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-grey-02);
+          border-radius: var(--border-radius-xl);
+        }
+      }
+    }
+
+    &.is-active {
+      color: var(--color-white);
+      pointer-events: none;
+    }
+  }
+}

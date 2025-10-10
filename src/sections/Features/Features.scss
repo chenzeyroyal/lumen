@@ -1,0 +1,28 @@
+.features {
+  .section__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    &-item {
+      width: 400px;
+    }
+  }
+  @include mobile {
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      flex-grow: 0;
+      overflow-x: auto;
+    }
+  }
+}
