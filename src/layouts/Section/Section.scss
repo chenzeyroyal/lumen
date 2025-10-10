@@ -4,10 +4,8 @@
   padding-block: var(--section-padding-y);
   row-gap: 40px;
 
-  &--inner {
-    @include mobile {
-      row-gap: 0;
-    }
+  @include mobile {
+    row-gap: 20px;
   }
 
   &__header {

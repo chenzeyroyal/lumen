@@ -2,10 +2,10 @@ import "./Section.scss"
 import classNames from "classnames"
 
 const Section = (props) => {
-  const { className, title, subtitle, mode, actions, children } = props
+  const { className, title, subtitle, actions, children } = props
 
   return (
-    <section className={classNames(className, "section", `section--${mode}`)}>
+    <section className={classNames(className, "section")}>
       {title && (
         <header className="section__header">
           <div className="section__description">

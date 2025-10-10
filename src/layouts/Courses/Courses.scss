@@ -1,62 +1,123 @@
-/* src/components/Courses.scss — дополняем ваш файл */
-.courses__filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 18px;
-  justify-content: space-between;
+.courses {
+  position: relative;
 
-  .filters__subcategories {
+  .display-button {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-02);
   }
 
-  .filter-subcategory {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    font-size: 14px;
-    cursor: pointer;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+  }
 
-    input[type="checkbox"] {
-      accent-color: inherit;
+  &__navigation {
+    background-color: var(--color-grey-03);
+    border-radius: var(--border-radius-l);
+
+    @include mobile {
+      background-color: transparent;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-block: fluid-to-laptop(20, 0);
+      column-gap: 15px;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      @include mobile {
+        justify-content: flex-start;
+      }
+
+      &-item {
+        flex-shrink: 0;
+        border-radius: var(--border-radius-xl);
+
+        &.is-active {
+          background-color: var(--color-accent);
+          color: var(--color-white);
+          pointer-events: none;
+        }
+
+        &:has(a.is-active) {
+          background-color: var(--color-accent);
+          color: var(--color-white);
+          pointer-events: none;
+        }
+
+        @include mobile {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--color-grey-02);
+
+          &:has(a.is-active) {
+            display: none;
+          }
+        }
+
+        &--special {
+          padding: fluid-to-laptop(20, 10);
+        }
+      }
+
+      &-link {
+        padding: fluid-to-laptop(20, 10);
+
+        border-radius: var(--border-radius-xl);
+
+        &.is-active {
+          pointer-events: none;
+        }
+
+        @include hover(false) {
+          background-color: var(--color-grey-02);
+        }
+      }
     }
   }
 
-  .filters__period {
+  .section__body {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    align-items: flex-end;
-  }
+    row-gap: 50px;
 
-  .filters__period-range {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-
-    input[type="range"] {
-      width: 160px;
-      -webkit-appearance: none;
-      appearance: none;
-      height: 6px;
-      border-radius: 6px;
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.08),
-        rgba(0, 0, 0, 0.04)
-      );
-      cursor: pointer;
+    @include mobile {
+      row-gap: 30px;
     }
   }
-}
 
-/* класс, который скрывает слайд */
-.courses__slide--hidden {
-  display: none !important;
+  &__body {
+    display: flex;
+    column-gap: 100px;
+    row-gap: 50px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &-item {
+      max-width: 400px;
+    }
+  }
 }
