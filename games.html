@@ -11,7 +11,7 @@
     <header class="header">
       <div class="header__inner container">
         <div class="header__wrapper">
-          <a class="header__logo logo" href="./">
+          <a class="header__logo logo" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb">
               <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
               <path d="M9 18h6"></path>
@@ -30,7 +30,7 @@
             <nav class="catalog-nav">
               <ul class="catalog-list">
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="./code.html">
+                  <a class="catalog-link button" href="/code">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml">
                       <path d="m18 16 4-4-4-4"></path>
                       <path d="m6 8-4 4 4 4"></path>
@@ -39,7 +39,7 @@
                   </a>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="./analytic.html">
+                  <a class="catalog-link button" href="/analytic">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-icon lucide-chart-column">
                       <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                       <path d="M18 17V9"></path>
@@ -49,7 +49,7 @@
                   </a>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="./games.html">
+                  <a class="catalog-link button" href="/games">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column-icon lucide-chart-column">
                       <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
                       <path d="M18 17V9"></path>
@@ -75,7 +75,7 @@
         <nav class="header__menu hidden-tablet">
           <ul class="header__menu-list" data-js-menu-list="">
             <li class="header__menu-item">
-              <a class="header__menu-link button" href="./courses.html"><span>Курсы</span></a>
+              <a class="header__menu-link button" href="/courses"><span>Курсы</span></a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link button" href="/"><span>Результаты</span></a>
@@ -99,8 +99,8 @@
           </div>
         </header>
         <div class="section__body">
-          <button class="display-button display-button--filters visible-mobile button" title="Фильтры" aria-label="Фильтры" type="button" data-js-display-button="filters">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-filter-plus-icon lucide-list-filter-plus">
+          <button class="courses__filter-button visible-mobile button" title="Фильтры" aria-label="Фильтры" type="button" data-js-visibility-button="display">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="courses__icon icon">
               <path d="M12 5H2"></path>
               <path d="M6 12h12"></path>
               <path d="M9 19h6"></path>
@@ -112,23 +112,23 @@
             <ul class="courses__navigation-list" data-js-section-navigation="">
               <li class="courses__navigation-list-item courses__navigation-list-item--special is-active visible-mobile">Игры</li>
               <li class="courses__navigation-list-item">
-                <a class="courses__navigation-list-link" href="./courses.html" data-js-section-navigation-link="">Все курсы</a>
+                <a class="courses__navigation-list-link" href="/courses" data-js-section-navigation-link="">Все курсы</a>
               </li>
               <li class="courses__navigation-list-item">
-                <a class="courses__navigation-list-link" href="./code.html" data-js-section-navigation-link="">Программирование</a>
+                <a class="courses__navigation-list-link" href="/code" data-js-section-navigation-link="">Программирование</a>
               </li>
               <li class="courses__navigation-list-item">
-                <a class="courses__navigation-list-link" href="./analytic.html" data-js-section-navigation-link="">Аналитика</a>
+                <a class="courses__navigation-list-link" href="/analytic" data-js-section-navigation-link="">Аналитика</a>
               </li>
               <li class="courses__navigation-list-item">
-                <a class="courses__navigation-list-link" href="./games.html" data-js-section-navigation-link="">Игры</a>
+                <a class="courses__navigation-list-link" href="/games" data-js-section-navigation-link="">Игры</a>
               </li>
             </ul>
           </nav>
           <div class="courses__body">
-            <aside class="courses__filters filters" data-js-modal="" data-js-filters="">
-              <div class="filters__header visible-mobile" data-js-hide-button="">
-                <button class="filters__close-button button" title="Закрыть фильтры" aria-label="Закрыть фильтры" type="button" data-js-close-button="">
+            <aside class="courses__filters filters" data-js-filters="">
+              <div class="filters__header visible-mobile">
+                <button class="filters__button filters__button--close button" title="Закрыть фильтры" aria-label="Закрыть фильтры" type="button" data-js-visibility-button="close">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
                     <path d="M18 6 6 18"></path>
                     <path d="m6 6 12 12"></path>
@@ -136,14 +136,14 @@
                 </button>
               </div>
               <div class="filters__subcategories">
-                <h3 class="filters__subtitle">Направления</h3>
-                <label class="filters__radio-button" name="subcategory-filters">
+                <h3 class="filters__title">Направления</h3>
+                <label class="filters__radio-button">
                   <input type="radio" name="subcategory-filters" data-js-radio-button="all" checked=""><span>Все программы</span>
                 </label>
-                <label class="filters__radio-button" name="subcategory-filters">
+                <label class="filters__radio-button">
                   <input type="radio" name="subcategory-filters" data-js-radio-button="unity"><span>Unity</span>
                 </label>
-                <label class="filters__radio-button" name="subcategory-filters">
+                <label class="filters__radio-button">
                   <input type="radio" name="subcategory-filters" data-js-radio-button="c-plus"><span>C++</span>
                 </label>
               </div>
@@ -157,8 +157,8 @@
                 </div>
               </div>
               <div class="filters__buttons visible-mobile" data-js-filter-buttons="">
-                <button class="filters__user-button filters__user-button--cancel button" type="button" data-js-filter-button="cancel"><span>Отменить фильтры</span></button>
-                <button class="filters__user-button button button--accent" type="button" data-js-filter-button="submit"><span>Принять фильтры</span></button>
+                <button class="filters__button filters__button--cancel button" type="button" data-js-filter-button="cancel"><span>Отменить фильтры</span></button>
+                <button class="filters__button filters__button--submit button button--accent" type="button" data-js-filter-button="submit"><span>Принять фильтры</span></button>
               </div>
             </aside>
             <div class="courses__cards">
@@ -336,7 +336,7 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="logo" href="./">
+      <a class="logo" href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb">
           <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
           <path d="M9 18h6"></path>
@@ -348,13 +348,13 @@
         <h3 class="footer__column-title">Направления</h3>
         <ul class="footer__category-list footer__list">
           <li class="footer__list-item">
-            <a class="footer__link" href="./code.html">Программирование</a>
+            <a class="footer__link" href="/code">Программирование</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="./analytic.html">Аналитика</a>
+            <a class="footer__link" href="/analytic">Аналитика</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="./games.html">Игры</a>
+            <a class="footer__link" href="/games">Игры</a>
           </li>
         </ul>
       </div>
@@ -409,7 +409,7 @@
         <h3 class="footer__column-title">о lumen</h3>
         <ul class="footer__menu-list footer__list">
           <li class="footer__list-item">
-            <a class="footer__link" href="./courses.html">Курсы</a>
+            <a class="footer__link" href="/courses">Курсы</a>
           </li>
           <li class="footer__list-item">
             <a class="footer__link" href="/">Результаты</a>
