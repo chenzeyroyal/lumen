@@ -16,9 +16,9 @@ const Courses = (props) => {
   return (
     <Section className="courses container" title={title}>
       <Button
-        className="display-button display-button--filters visible-mobile"
+        className="courses__filter-button courses__filter-button-- visible-mobile"
         label="Фильтры"
-        extraAttrs={{ "data-js-display-button": "filters" }}
+        extraAttrs={{ "data-js-filter-button": "display" }}
         isLabelHidden
       >
         <svg
@@ -31,7 +31,7 @@ const Courses = (props) => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="lucide lucide-list-filter-plus-icon lucide-list-filter-plus"
+          class="courses__icon icon"
         >
           <path d="M12 5H2" />
           <path d="M6 12h12" />
@@ -40,10 +40,17 @@ const Courses = (props) => {
           <path d="M19 8V2" />
         </svg>
       </Button>
-      <nav className="courses__navigation" data-js-popup="navigation">
+
+      <nav className="courses__navigation">
         <ul className="courses__navigation-list" data-js-section-navigation="">
-          <li className="courses__navigation-list-item courses__navigation-list-item--special is-active visible-mobile">
-            {title}
+          <li className="courses__navigation-list-item visible-mobile">
+            <a
+              className="courses__navigation-list-link"
+              href="#"
+              data-js-section-navigation-link=""
+            >
+              {title}
+            </a>
           </li>
           <li className="courses__navigation-list-item">
             <a
@@ -54,8 +61,8 @@ const Courses = (props) => {
               Все курсы
             </a>
           </li>
-          {courseGroups.map(({ title, href }) => (
-            <li className="courses__navigation-list-item">
+          {courseGroups.map(({ title, href }, index) => (
+            <li className="courses__navigation-list-item" key={index}>
               <a
                 className="courses__navigation-list-link"
                 href={href}
@@ -67,7 +74,54 @@ const Courses = (props) => {
           ))}
         </ul>
       </nav>
-
+      <div className="courses__applied-filters visible-mobile">
+        <Button
+          className="courses__applied-filters-button"
+          label="Отменить фильтр"
+          isLabelHidden
+          extraAttrs={{ "data-js-cancel-selected-button": "category" }}
+        >
+          <span></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </Button>
+        <Button
+          className="courses__applied-filters-button"
+          label="Отменить фильтр"
+          isLabelHidden
+          extraAttrs={{ "data-js-cancel-selected-button": "range" }}
+        >
+          <span></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </Button>
+      </div>
       <div className="courses__body">
         <Filters className="courses__filters" items={filteredCourseGroups()} />
         <div className="courses__cards">
@@ -79,7 +133,7 @@ const Courses = (props) => {
                   <li
                     className="courses__list-item"
                     data-js-course-item={JSON.stringify({
-                      id: subCat.id,
+                      title: subCat.title,
                       duration: course.duration,
                     })}
                   >

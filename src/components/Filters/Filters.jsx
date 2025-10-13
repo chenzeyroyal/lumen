@@ -11,16 +11,12 @@ const Filters = (props) => {
   }
 
   return (
-    <aside
-      className={classNames(className, "filters")}
-      data-js-modal=""
-      data-js-filters=""
-    >
-      <div className="filters__header visible-mobile" data-js-hide-button="">
+    <aside className={classNames(className, "filters")} data-js-filters="">
+      <div className="filters__header visible-mobile">
         <Button
-          className="filters__close-button"
+          className="filters__button filters__button--close"
           label="Закрыть фильтры"
-          extraAttrs={{ "data-js-close-button": "" }}
+          extraAttrs={{ "data-js-filter-button": "close" }}
           isLabelHidden
         >
           <svg
@@ -41,24 +37,24 @@ const Filters = (props) => {
         </Button>
       </div>
       <div className="filters__subcategories">
-        <h3 className="filters__subtitle">Направления</h3>
-        <label className="filters__radio-button" name="subcategory-filters">
+        <h3 className="filters__title">Направления</h3>
+        <label className="filters__radio-button">
           <input
             type="radio"
             name="subcategory-filters"
             checked
-            data-js-radio-button="all"
+            data-js-radio-button="Все программы"
           />
           <span>Все программы</span>
         </label>
 
         {items.map(({ subCategories }) =>
           subCategories.map((subCat) => (
-            <label className="filters__radio-button" name="subcategory-filters">
+            <label className="filters__radio-button">
               <input
                 type="radio"
                 name="subcategory-filters"
-                data-js-radio-button={subCat.id}
+                data-js-radio-button={subCat.title}
               />
               <span>{subCat.title}</span>
             </label>
@@ -68,7 +64,7 @@ const Filters = (props) => {
       <div className="filters__range">
         <header className="filters__range-header">
           <h3 className="filters__range-title">Длительность</h3>
-          <p className="filters__range-subtitle">{`от ${rangeValues.min} до ${rangeValues.max} месяцев`}</p>
+          <p className="filters__range-subtitle" data-js-range-subtitle=""></p>
         </header>
 
         <div className="filters__range-body">
@@ -86,19 +82,16 @@ const Filters = (props) => {
           <span>{rangeValues.max}</span>
         </div>
       </div>
-      <div
-        className="filters__buttons visible-mobile"
-        data-js-filter-buttons=""
-      >
+      <div className="filters__buttons visible-mobile">
         <Button
-          className="filters__user-button filters__user-button--cancel"
+          className="filters__button filters__button--cancel"
           label="Отменить фильтры"
           extraAttrs={{ "data-js-filter-button": "cancel" }}
         />
         <Button
-          className="filters__user-button"
+          className="filters__button filters__button--apply"
           label="Принять фильтры"
-          extraAttrs={{ "data-js-filter-button": "submit" }}
+          extraAttrs={{ "data-js-filter-button": "apply" }}
           isAccent
         />
       </div>

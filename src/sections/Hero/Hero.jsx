@@ -23,7 +23,7 @@ const Hero = () => {
     <Section className="hero container">
       <div className="hero__grid grid">
         <div className="grid__column grid__column--large">
-          <div className="grid__content grid__content--main">
+          <div className="grid__content grid__content">
             <Slider
               className="hero__slider"
               hasPagination={false}

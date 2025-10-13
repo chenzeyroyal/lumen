@@ -1,12 +1,10 @@
 .courses {
   position: relative;
 
-  .display-button {
+  &__filter-button {
     width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: var(--color-grey-02);
+    background-color: var(--color-grey);
   }
 
   &__header {
@@ -16,11 +14,10 @@
   }
 
   &__navigation {
-    background-color: var(--color-grey-03);
     border-radius: var(--border-radius-l);
 
-    @include mobile {
-      background-color: transparent;
+    @include mobile-above {
+      background-color: var(--color-grey-03);
     }
 
     &-list {
@@ -33,6 +30,12 @@
       scrollbar-width: none;
       -ms-overflow-style: none;
 
+      & > :first-child {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        pointer-events: none;
+      }
+
       @include mobile {
         justify-content: flex-start;
       }
@@ -41,46 +44,58 @@
         flex-shrink: 0;
         border-radius: var(--border-radius-xl);
 
-        &.is-active {
-          background-color: var(--color-accent);
-          color: var(--color-white);
-          pointer-events: none;
-        }
-
-        &:has(a.is-active) {
-          background-color: var(--color-accent);
-          color: var(--color-white);
-          pointer-events: none;
-        }
-
         @include mobile {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: var(--color-grey-02);
+          background-color: var(--color-grey);
 
           &:has(a.is-active) {
-            display: none;
+            display: none !important;
           }
-        }
-
-        &--special {
-          padding: fluid-to-laptop(20, 10);
         }
       }
 
       &-link {
         padding: fluid-to-laptop(20, 10);
-
         border-radius: var(--border-radius-xl);
 
         &.is-active {
+          background-color: var(--color-accent);
+          color: var(--color-white);
           pointer-events: none;
         }
 
         @include hover(false) {
-          background-color: var(--color-grey-02);
+          background-color: var(--color-grey);
         }
+      }
+    }
+  }
+
+  &__applied-filters {
+    display: flex;
+    column-gap: 10px;
+
+    &:not(:has(&-button.is-active)) {
+      display: none !important;
+    }
+
+    &-button {
+      padding: 0;
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-radius: var(--border-radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 5px;
+      padding: 5px 10px;
+
+      &:not(.is-active) {
+        display: none;
+      }
+
+      svg,
+      span {
+        pointer-events: none;
       }
     }
   }

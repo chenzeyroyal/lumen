@@ -69,15 +69,10 @@
     }
 
     &-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: column;
       column-gap: 50px;
       row-gap: 25px;
-
-      @include mobile {
-        display: flex;
-        flex-direction: column;
-      }
     }
 
     &-link {
@@ -103,7 +98,7 @@
 
     &-link {
       @include hover {
-        background-color: var(--color-grey-02);
+        background-color: var(--color-grey);
       }
     }
   }

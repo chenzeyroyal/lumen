@@ -12,7 +12,6 @@ class Filters {
     rangeSlider: "[data-js-range-slider]",
     courseItem: "[data-js-course-item]",
     coursesTitle: "[data-js-courses-title]",
-    rangeSubtitle: "[data-js-range-subtitle]",
   }
 
   stateClasses = {
@@ -44,7 +43,6 @@ class Filters {
     this.rangeSlider = this.rootElement.querySelector(
       this.selectors.rangeSlider
     )
-    this.rangeSubtitle = document.querySelector(this.selectors.rangeSubtitle)
     this.controlButtons = document.querySelectorAll(
       this.selectors.controlButton
     )
@@ -55,7 +53,10 @@ class Filters {
     this.courseItems = document.querySelectorAll(this.selectors.courseItem)
     this.coursesTitle = document.querySelector(this.selectors.coursesTitle)
 
-    this.state = { ...this.defaultState }
+    this.state = {
+      category: this.defaultState.category,
+      duration: this.defaultState.duration,
+    }
 
     this.actions = {
       close: this.closeFilters,
@@ -66,7 +67,7 @@ class Filters {
 
     this.visibleCourses = [...this.courseItems]
 
-    this.updateTitles()
+    this.updateTitle()
     this.bindEvents()
   }
 
@@ -96,7 +97,7 @@ class Filters {
     })
 
     this.showButtons()
-    this.updateTitles()
+    this.updateTitle()
   }
 
   filterByCategories(buttonId) {
@@ -111,15 +112,11 @@ class Filters {
     this.filterCourses()
   }
 
-  updateTitles() {
+  updateTitle() {
     this.coursesTitle.textContent = getWordFromCount(
       this.visibleCourses.length,
       "courses"
     )
-
-    this.rangeSubtitle.textContent = `от ${
-      this.rangeSlider.min
-    } до ${getWordFromCount(this.rangeSlider.value, this.filterTypes.range)}`
   }
 
   updateAppliedFilters() {
@@ -225,6 +222,7 @@ class Filters {
     this.state = {
       category: this.defaultState.category,
       duration: this.defaultState.duration,
+      filtered: this.defaultState.filtered,
     }
 
     this.rangeSlider.value = this.state.duration
