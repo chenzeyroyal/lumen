@@ -99,7 +99,7 @@
           </div>
         </header>
         <div class="section__body">
-          <button class="courses__filter-button visible-mobile button" title="Фильтры" aria-label="Фильтры" type="button" data-js-visibility-button="display">
+          <button class="courses__filter-button courses__filter-button-- visible-mobile button" title="Фильтры" aria-label="Фильтры" type="button" data-js-filter-button="display">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="courses__icon icon">
               <path d="M12 5H2"></path>
               <path d="M6 12h12"></path>
@@ -108,9 +108,11 @@
               <path d="M19 8V2"></path>
             </svg>
           </button>
-          <nav class="courses__navigation" data-js-popup="navigation">
+          <nav class="courses__navigation">
             <ul class="courses__navigation-list" data-js-section-navigation="">
-              <li class="courses__navigation-list-item courses__navigation-list-item--special is-active visible-mobile">Все курсы</li>
+              <li class="courses__navigation-list-item visible-mobile">
+                <a class="courses__navigation-list-link" href="#" data-js-section-navigation-link="">Все курсы</a>
+              </li>
               <li class="courses__navigation-list-item">
                 <a class="courses__navigation-list-link" href="/courses" data-js-section-navigation-link="">Все курсы</a>
               </li>
@@ -125,10 +127,24 @@
               </li>
             </ul>
           </nav>
+          <div class="courses__applied-filters visible-mobile">
+            <button class="courses__applied-filters-button button" title="Отменить фильтр" aria-label="Отменить фильтр" type="button" data-js-cancel-selected-button="category"><span></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+            <button class="courses__applied-filters-button button" title="Отменить фильтр" aria-label="Отменить фильтр" type="button" data-js-cancel-selected-button="range"><span></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
           <div class="courses__body">
             <aside class="courses__filters filters" data-js-filters="">
               <div class="filters__header visible-mobile">
-                <button class="filters__button filters__button--close button" title="Закрыть фильтры" aria-label="Закрыть фильтры" type="button" data-js-visibility-button="close">
+                <button class="filters__button filters__button--close button" title="Закрыть фильтры" aria-label="Закрыть фильтры" type="button" data-js-filter-button="close">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
                     <path d="M18 6 6 18"></path>
                     <path d="m6 6 12 12"></path>
@@ -138,45 +154,45 @@
               <div class="filters__subcategories">
                 <h3 class="filters__title">Направления</h3>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="all" checked=""><span>Все программы</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Все программы" checked=""><span>Все программы</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="frontend"><span>Фронтенд-разработка</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Фронтенд-разработка"><span>Фронтенд-разработка</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="backend"><span>Бэкенд-разработка</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Бэкенд-разработка"><span>Бэкенд-разработка</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="buisness"><span>Бизнес</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Бизнес"><span>Бизнес</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="bank"><span>Банковское дело</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Банковское дело"><span>Банковское дело</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="unity"><span>Unity</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Unity"><span>Unity</span>
                 </label>
                 <label class="filters__radio-button">
-                  <input type="radio" name="subcategory-filters" data-js-radio-button="c-plus"><span>C++</span>
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="C++"><span>C++</span>
                 </label>
               </div>
               <div class="filters__range">
                 <header class="filters__range-header">
                   <h3 class="filters__range-title">Длительность</h3>
-                  <p class="filters__range-subtitle">от 6 до 24 месяцев</p>
+                  <p class="filters__range-subtitle" data-js-range-subtitle=""></p>
                 </header>
                 <div class="filters__range-body"><span>6</span>
                   <input type="range" data-js-range-slider="" id="range-slider" class="filters__range-slider" min="6" max="24" step="1" value="24"><span>24</span>
                 </div>
               </div>
-              <div class="filters__buttons visible-mobile" data-js-filter-buttons="">
+              <div class="filters__buttons visible-mobile">
                 <button class="filters__button filters__button--cancel button" type="button" data-js-filter-button="cancel"><span>Отменить фильтры</span></button>
-                <button class="filters__button filters__button--submit button button--accent" type="button" data-js-filter-button="submit"><span>Принять фильтры</span></button>
+                <button class="filters__button filters__button--apply button button--accent" type="button" data-js-filter-button="apply"><span>Принять фильтры</span></button>
               </div>
             </aside>
             <div class="courses__cards">
               <h3 class="courses__cards-title" data-js-courses-title=""></h3>
               <ul class="courses__list">
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -191,7 +207,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/python.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -206,7 +222,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -221,7 +237,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -236,7 +252,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -251,7 +267,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;frontend&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -266,7 +282,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/marketing.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -281,7 +297,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/python.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -296,7 +312,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -311,7 +327,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -326,7 +342,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -341,7 +357,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;backend&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -356,7 +372,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/marketing.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -371,7 +387,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/python.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -386,7 +402,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -401,7 +417,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -416,7 +432,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -431,7 +447,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;buisness&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бизнес&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -446,7 +462,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/marketing.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -461,7 +477,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/python.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -476,7 +492,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -491,7 +507,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -506,7 +522,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -521,7 +537,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;bank&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Банковское дело&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -536,7 +552,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/marketing.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -551,7 +567,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/python.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -566,7 +582,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -581,7 +597,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -596,7 +612,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -611,7 +627,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Unity&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -626,7 +642,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/marketing.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;c-plus&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;C++&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -641,7 +657,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/designer.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;c-plus&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;C++&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -656,7 +672,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/ai.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;c-plus&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;C++&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -671,7 +687,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/graphic.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;c-plus&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;C++&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
@@ -686,7 +702,7 @@
                     <img class="course-card__image" src="/lumen/assets/images/unity.png">
                   </a>
                 </li>
-                <li class="courses__list-item" data-js-course-item="{&quot;id&quot;:&quot;c-plus&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;C++&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
                   <a class="course-card" href="/">
                     <div class="course-card__body">
                       <header class="course-card__header">
