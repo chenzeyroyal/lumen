@@ -3,10 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "minista",
-    "build": "minista build --base /lumen/",
-    "preview": "minista preview",
-      "deploy": "npm run build && gh-pages -d dist"
+   "start": "minista",
+    "build": "minista build",
+    "preview": "minista preview"
   },
   "prettier": {
     "semi": false
