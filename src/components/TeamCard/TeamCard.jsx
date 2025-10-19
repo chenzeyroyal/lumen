@@ -6,7 +6,7 @@ const TeamCard = (props) => {
 
   return (
     <div className={classNames(className, "team-card")}>
-      <img className="team-card__image" src={image} />
+      <img className="team-card__image" src={image} alt="Фото сотрудника" />
       <div className="team-card__description">
         <h3 className="team-card__title">{title}</h3>
         <p className="team-card__subtitle">{subtitle}</p>

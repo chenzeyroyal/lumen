@@ -22,7 +22,7 @@ const Logo = (props) => {
         <path d="M9 18h6" />
         <path d="M10 22h4" />
       </svg>
-      <h1>lumen.</h1>
+      <h2>lumen.</h2>
     </a>
   )
 }

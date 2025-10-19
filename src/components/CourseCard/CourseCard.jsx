@@ -1,5 +1,6 @@
 import "./CourseCard.scss"
 import classNames from "classnames"
+import { Image } from "minista"
 
 const CourseCard = (props) => {
   const { className, title, subTitle, description, duration, href, image } =
@@ -17,7 +18,7 @@ const CourseCard = (props) => {
         </footer>
         <p className="course-card__description">{description}</p>
       </div>
-      <img className="course-card__image" src={image} />
+      <Image className='course-card__image' src={image}/>
     </a>
   )
 }

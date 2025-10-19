@@ -1,0 +1,44 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 50px;
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+  }
+
+  &__tag {
+    background-color: orange;
+    border-radius: var(--border-radius-l);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--color-black);
+    font-weight: 700;
+    margin-right: 30px;
+  }
+}

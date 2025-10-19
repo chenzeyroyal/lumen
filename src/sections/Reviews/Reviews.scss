@@ -1,0 +1,50 @@
+.reviews {
+  row-gap: 0;
+
+  &__hero {
+    .section__body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+  &__image {
+    border-radius: var(--border-radius-l);
+    margin-inline: auto;
+  }
+
+  &__rate-list {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 5px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--color-grey);
+      padding: 30px 20px;
+      border-radius: var(--border-radius-l);
+      width: 300px;
+
+      span:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__reviews-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 80px;
+    margin-inline: auto;
+    max-width: 1000px;
+  }
+}

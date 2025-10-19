@@ -1,0 +1,43 @@
+.contacts {
+  .section__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 50px;
+
+    &-link,
+    &-title {
+      font-weight: 700;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &-link {
+      font-size: fluid-to-laptop(20, 16);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+    &-subtitle {
+      color: var(--color-grey-04);
+    }
+  }
+  &__form {
+    margin-inline: auto;
+  }
+}

@@ -30,7 +30,7 @@ const LinkCard = (props) => {
         </header>
         <footer className="link-card__footer">
           {mode === "link" && (
-            <Button className="link-card__button" isAccent isLabelHidden>
+            <div className="link-card__button button button--accent">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -41,18 +41,18 @@ const LinkCard = (props) => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                class="arrow-icon"
               >
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </Button>
+            </div>
           )}
           {mode === "product" && (
             <p className="link-card__subtitle">{subtitle}</p>
           )}
         </footer>
       </div>
-      <img className="link-card__image" src={image} />
+      <img className="link-card__image" src={image} alt="" />
     </a>
   )
 }

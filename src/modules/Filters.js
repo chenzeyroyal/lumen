@@ -2,8 +2,9 @@ import getWordFromCount from "@/utils/getWordFromCount"
 import getAttrNameFromSelector from "@/utils/getAttrNameFromSelector"
 import getParams from "@/utils/getParams"
 import parseDuration from "@/utils/parseDuration"
+import BaseComponent from "./generic/BaseComponent"
 
-class Filters {
+class Filters extends BaseComponent {
   selectors = {
     root: "[data-js-filters]",
     radioButton: "[data-js-radio-button]",
@@ -25,7 +26,7 @@ class Filters {
     progress: "--slider-progress",
   }
 
-  defaultState = {
+  initialState = {
     category: "Все программы",
     duration: 24,
   }
@@ -36,8 +37,11 @@ class Filters {
   }
 
   constructor() {
+    super()
+
     this.rootElement = document.querySelector(this.selectors.root)
     if (!this.rootElement) return
+
     this.radioButtons = this.rootElement.querySelectorAll(
       this.selectors.radioButton
     )
@@ -55,25 +59,90 @@ class Filters {
     this.courseItems = document.querySelectorAll(this.selectors.courseItem)
     this.coursesTitle = document.querySelector(this.selectors.coursesTitle)
 
-    this.state = { ...this.defaultState }
+    this.state = this.getProxyState({ ...this.initialState })
 
     this.actions = {
       close: this.closeFilters,
       display: this.showFilters,
       cancel: this.cancelFilters,
-      apply: this.applyFilters,
+      apply: this.closeFilters,
     }
 
     this.visibleCourses = [...this.courseItems]
 
-    this.updateTitles()
+    this.updateUI()
     this.bindEvents()
   }
 
-  isFiltered() {
+  updateUI() {
+    this.filterCourses()
+
+    const updateSliderStyle = () => {
+      const value =
+        ((this.state.duration - this.rangeSlider.min) /
+          (this.rangeSlider.max - this.rangeSlider.min)) *
+        100
+
+      this.rangeSlider.style.setProperty(
+        this.stateCSSVariables.progress,
+        `${value}%`
+      )
+    }
+
+    const updateAppliedFilters = () => {
+      this.cancelSelectedButtons.forEach((button) => {
+        const buttonType = button.getAttribute(
+          getAttrNameFromSelector(this.selectors.cancelSelectedButton)
+        )
+
+        const isFiltered = this.isFiltered
+        if (!isFiltered) {
+          button.classList.remove(this.stateClasses.isActive)
+          button.querySelector("span").textContent = ""
+          return
+        }
+
+        if (
+          buttonType === this.filterTypes.category &&
+          this.state.category !== this.initialState.category
+        ) {
+          button.querySelector("span").textContent = this.state.category
+          button.classList.add(this.stateClasses.isActive)
+        }
+
+        if (
+          buttonType === this.filterTypes.range &&
+          this.state.duration !== this.initialState.duration
+        ) {
+          button.classList.add(this.stateClasses.isActive)
+          button.querySelector("span").textContent = getWordFromCount(
+            this.state.duration,
+            this.filterTypes.range
+          )
+        }
+      })
+    }
+
+    const updateTitles = () => {
+      this.coursesTitle.textContent = getWordFromCount(
+        this.visibleCourses.length,
+        "courses"
+      )
+
+      this.rangeSubtitle.textContent = `от ${
+        this.rangeSlider.min
+      } до ${getWordFromCount(this.rangeSlider.value, this.filterTypes.range)}`
+    }
+
+    updateSliderStyle()
+    updateAppliedFilters()
+    updateTitles()
+  }
+
+  get isFiltered() {
     return (
-      this.state.category !== this.defaultState.category ||
-      this.state.duration !== this.defaultState.duration
+      this.state.category !== this.initialState.category ||
+      this.state.duration !== this.initialState.duration
     )
   }
 
@@ -96,78 +165,18 @@ class Filters {
     })
 
     this.showButtons()
-    this.updateTitles()
   }
 
-  filterByCategories(buttonId) {
-    this.state.category = buttonId
-
-    this.filterCourses()
+  filterByCategories(button) {
+    this.state.category = button.value
   }
 
   filterByRange() {
     this.state.duration = +this.rangeSlider.value
-
-    this.filterCourses()
-  }
-
-  updateTitles() {
-    this.coursesTitle.textContent = getWordFromCount(
-      this.visibleCourses.length,
-      "courses"
-    )
-
-    this.rangeSubtitle.textContent = `от ${
-      this.rangeSlider.min
-    } до ${getWordFromCount(this.rangeSlider.value, this.filterTypes.range)}`
-  }
-
-  updateAppliedFilters() {
-    this.cancelSelectedButtons.forEach((button) => {
-      const buttonType = button.getAttribute(
-        getAttrNameFromSelector(this.selectors.cancelSelectedButton)
-      )
-
-      const isFiltered = this.isFiltered()
-      if (!isFiltered) {
-        button.classList.remove(this.stateClasses.isActive)
-        button.querySelector("span").textContent = ""
-      }
-      if (
-        buttonType === this.filterTypes.category &&
-        this.state.category !== this.defaultState.category
-      ) {
-        button.querySelector("span").textContent = this.state.category
-        button.classList.add(this.stateClasses.isActive)
-      }
-
-      if (
-        buttonType === this.filterTypes.range &&
-        this.state.duration !== this.defaultState.duration
-      ) {
-        button.classList.add(this.stateClasses.isActive)
-        button.querySelector("span").textContent = getWordFromCount(
-          this.state.duration,
-          this.filterTypes.range
-        )
-      }
-    })
-  }
-
-  updateSliderStyle() {
-    const value =
-      ((this.state.duration - this.rangeSlider.min) /
-        (this.rangeSlider.max - this.rangeSlider.min)) *
-      100
-
-    this.rangeSlider.style.setProperty(
-      this.stateCSSVariables.progress,
-      `${value}%`
-    )
   }
 
   showButtons() {
-    const isFiltered = this.isFiltered()
+    const isFiltered = this.isFiltered
     if (!isFiltered) return
 
     this.controlButtons.forEach((button) => {
@@ -181,22 +190,11 @@ class Filters {
     })
   }
 
-  lockScroll() {
-    document.documentElement.classList.add(this.stateClasses.isLock)
-  }
-
-  unlockScroll() {
-    document.documentElement.classList.remove(this.stateClasses.isLock)
-  }
-
   showFilters = () => {
     this.rootElement.classList.add(this.stateClasses.isActive)
 
     this.radioButtons.forEach((button) => {
-      const buttonId = button.getAttribute(
-        getAttrNameFromSelector(this.selectors.radioButton)
-      )
-      if (buttonId !== this.state.category) {
+      if (button.value !== this.state.category) {
         button.checked = false
       } else {
         button.checked = true
@@ -216,22 +214,19 @@ class Filters {
     this.hideButtons()
   }
 
-  applyFilters = () => {
-    this.updateAppliedFilters()
-    this.closeFilters()
+  lockScroll() {
+    document.documentElement.classList.add(this.stateClasses.isLock)
+  }
+
+  unlockScroll() {
+    document.documentElement.classList.remove(this.stateClasses.isLock)
   }
 
   cancelFilters = () => {
-    this.state = {
-      category: this.defaultState.category,
-      duration: this.defaultState.duration,
-    }
+    this.state.category = this.initialState.category
+    this.state.duration = this.initialState.duration
 
     this.rangeSlider.value = this.state.duration
-
-    this.filterCourses()
-    this.updateSliderStyle()
-    this.updateAppliedFilters()
     this.closeFilters()
   }
 
@@ -241,30 +236,22 @@ class Filters {
     )
 
     if (filterType === this.filterTypes.category) {
-      this.state.category = this.defaultState.category
+      this.state.category = this.initialState.category
       e.target.classList.remove(this.stateClasses.isActive)
     }
 
     if (filterType === this.filterTypes.range) {
-      this.state.duration = this.defaultState.duration
+      this.state.duration = this.initialState.duration
       e.target.classList.remove(this.stateClasses.isActive)
     }
-
-    this.filterCourses()
-    this.updateSliderStyle()
   }
 
   onRangeInput() {
     this.filterByRange()
-    this.updateSliderStyle()
   }
 
   onButtonClick(button) {
-    const buttonId = button.getAttribute(
-      getAttrNameFromSelector(this.selectors.radioButton)
-    )
-
-    this.filterByCategories(buttonId)
+    this.filterByCategories(button)
   }
 
   bindEvents() {

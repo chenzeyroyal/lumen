@@ -36,25 +36,33 @@ const Filters = (props) => {
           </svg>
         </Button>
       </div>
-      <div className="filters__subcategories">
-        <h3 className="filters__title">Направления</h3>
+      <div
+        className="filters__subcategories"
+        role="radiogroup"
+        aria-labelledby="subcategories-title"
+      >
+        <h3 className="filters__title" id="subcategories-title">
+          Направления
+        </h3>
         <label className="filters__radio-button">
           <input
             type="radio"
             name="subcategory-filters"
             checked
+            value="Все программы"
             data-js-radio-button="Все программы"
           />
           <span>Все программы</span>
         </label>
 
         {items.map(({ subCategories }) =>
-          subCategories.map((subCat) => (
-            <label className="filters__radio-button">
+          subCategories.map((subCat, index) => (
+            <label className="filters__radio-button" key={index}>
               <input
                 type="radio"
                 name="subcategory-filters"
-                data-js-radio-button={subCat.title}
+                value={subCat.title}
+                data-js-radio-button=""
               />
               <span>{subCat.title}</span>
             </label>

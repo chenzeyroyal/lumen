@@ -1,0 +1,40 @@
+.review-card {
+  display: flex;
+  align-items: start;
+  column-gap: 20px;
+
+  &__avatar {
+    @include square(75px);
+    clip-path: circle(50% at center);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    span:first-child {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+}

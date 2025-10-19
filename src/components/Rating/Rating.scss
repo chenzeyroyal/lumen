@@ -1,0 +1,28 @@
+.rating {
+  --ratingValue: 5;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &__stars {
+    position: relative;
+
+    svg {
+      stroke-width: 1px;
+    }
+    &-filled {
+      --ratingViewStarsClipEnd: calc(100% / 5 * var(--ratingValue));
+      svg {
+        fill: orange;
+      }
+      @include abs-cover;
+
+      clip-path: polygon(
+        0 0,
+        var(--ratingViewStarsClipEnd) 0,
+        var(--ratingViewStarsClipEnd) 100%,
+        0 100%
+      );
+    }
+  }
+}

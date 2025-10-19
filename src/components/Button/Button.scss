@@ -4,21 +4,20 @@
   background: none;
   border: none;
   color: inherit;
-  column-gap: 5px;
+  column-gap: 10px;
   border-radius: var(--border-radius-l);
   padding: fluid-to-laptop(10, 5);
 
-  &:has(span) {
-    padding: fluid-to-laptop(10, 10) fluid-to-laptop(15, 10);
-  }
-
   &--accent {
-    font-weight: 500;
     color: var(--color-white);
     background-color: var(--color-accent);
 
     @include hover {
       opacity: 0.8;
+    }
+
+    @include mobile-above {
+      font-weight: 500;
     }
   }
 

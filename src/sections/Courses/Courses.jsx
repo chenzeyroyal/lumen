@@ -14,7 +14,7 @@ const Courses = (props) => {
   }
 
   return (
-    <Section className="courses container" title={title}>
+    <Section className="courses container" title={title} isHeaderHidden>
       <Button
         className="courses__filter-button courses__filter-button-- visible-mobile"
         label="Фильтры"
@@ -79,6 +79,7 @@ const Courses = (props) => {
           className="courses__applied-filters-button"
           label="Отменить фильтр"
           isLabelHidden
+          isAccent
           extraAttrs={{ "data-js-cancel-selected-button": "category" }}
         >
           <span></span>
@@ -102,6 +103,7 @@ const Courses = (props) => {
           className="courses__applied-filters-button"
           label="Отменить фильтр"
           isLabelHidden
+          isAccent
           extraAttrs={{ "data-js-cancel-selected-button": "range" }}
         >
           <span></span>
@@ -129,9 +131,10 @@ const Courses = (props) => {
           <ul className="courses__list">
             {filteredCourseGroups().map(({ subCategories }) =>
               subCategories.map((subCat) =>
-                subCat.items.map((course) => (
+                subCat.items.map((course, index) => (
                   <li
                     className="courses__list-item"
+                    key={index}
                     data-js-course-item={JSON.stringify({
                       title: subCat.title,
                       duration: course.duration,

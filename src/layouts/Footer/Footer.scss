@@ -33,7 +33,7 @@
 
   &__link {
     transition: opacity var(--transition-duration);
-
+    padding: 5px;
     @include hover {
       opacity: 0.7;
     }

@@ -20,7 +20,7 @@ main {
 
 h1,
 .h1 {
-  @include fluid-text(23, 20);
+  @include fluid-text(50, 30);
 
   font-weight: 700;
 }
@@ -34,7 +34,7 @@ h2,
 
 h3,
 .h3 {
-  @include fluid-text(24, 16);
+  @include fluid-text(22, 16);
 
   font-weight: 700;
 }

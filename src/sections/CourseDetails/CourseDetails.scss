@@ -1,0 +1,40 @@
+.course-details {
+  section:first-of-type {
+    padding-block: 100px;
+  }
+
+  &__description {
+    &-body {
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 30px;
+      }
+    }
+
+    &-image {
+      object-fit: contain;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      width: 50%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-size: fluid-to-laptop(50, 20);
+    }
+
+    &-subtitle {
+      color: var(--color-grey-04);
+    }
+  }
+}

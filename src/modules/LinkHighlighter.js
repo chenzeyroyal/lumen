@@ -1,4 +1,4 @@
-class URLController {
+class LinkHighlighter {
   selectors = {
     navigation: "[data-js-section-navigation]",
     link: "[data-js-section-navigation-link]",
@@ -17,7 +17,6 @@ class URLController {
     this.navigationLinks = this.navigationElement.querySelectorAll(
       this.selectors.link
     )
-
     this.updateLinkStyle()
   }
 
@@ -30,4 +29,4 @@ class URLController {
   }
 }
 
-export default URLController
+export default LinkHighlighter

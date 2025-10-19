@@ -5,16 +5,15 @@ const menuItems = [
   },
   {
     title: "Результаты",
-    href: "/",
-  },
-
-  {
-    title: "Отзывы",
-    href: "/",
+    href: "/results",
   },
   {
     title: "Контакты",
-    href: "/",
+    href: "/contacts",
+  },
+  {
+    title: "Отзывы",
+    href: "/reviews",
   },
 ]
 export default menuItems

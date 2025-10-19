@@ -20,7 +20,7 @@ const Hero = () => {
   }
 
   return (
-    <Section className="hero container">
+    <Section className="hero container" title="Главная секция" isHeaderHidden>
       <div className="hero__grid grid">
         <div className="grid__column grid__column--large">
           <div className="grid__content grid__content">
@@ -43,21 +43,21 @@ const Hero = () => {
               className="grid__content-card"
               title="Курсы"
               image={SLIDE_ONE}
-              href="/"
+              href="/сourses"
             />
 
             <LinkCard
               className="grid__content-card"
               title="Контакты"
               image={SLIDE_ONE}
-              href="/"
+              href="/contacts"
             />
 
             <LinkCard
               className="grid__content-card"
               title="Отзывы"
               image={SLIDE_ONE}
-              href="/"
+              href="/reviews"
             />
           </div>
         </div>
@@ -67,13 +67,13 @@ const Hero = () => {
               className="grid__content-card"
               title="Результаты"
               image={SLIDE_ONE}
-              href="/"
+              href="/results"
             />
             <LinkCard
               className="grid__content-card"
-              title="О компании"
+              title="Войти в IT"
               image={SLIDE_ONE}
-              href="/"
+              href="/courses/code/"
             />
           </div>
         </div>

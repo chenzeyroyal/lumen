@@ -79,15 +79,7 @@
     }
 
     &-button {
-      padding: 0;
-      background-color: var(--color-accent);
-      color: var(--color-white);
       border-radius: var(--border-radius-xl);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      column-gap: 5px;
-      padding: 5px 10px;
 
       &:not(.is-active) {
         display: none;
@@ -103,11 +95,7 @@
   .section__body {
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
-
-    @include mobile {
-      row-gap: 30px;
-    }
+    row-gap: fluid-to-laptop(50, 30);
   }
 
   &__body {

@@ -5,11 +5,11 @@
   z-index: var(--z-index-header);
   top: 0;
   display: flex;
+  background-color: inherit;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-block: 10px;
-  background-color: var(--color-white);
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
@@ -18,7 +18,7 @@
 
   @keyframes scrolling-header {
     to {
-      border-color: var(--color-grey);
+      border-color: var(--color-grey-02);
     }
   }
 

@@ -14,7 +14,7 @@ const defaultSliderParams = {
 const Slider = (props) => {
   const {
     className,
-    children,
+    children = [],
     navigationTargetElementId = null,
     sliderParams = defaultSliderParams,
     hasPagination = true,

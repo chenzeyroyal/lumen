@@ -1,4 +1,4 @@
-import Courses from "@/layouts/Courses"
+import Courses from "@/sections/Courses"
 
 export default function () {
   return (

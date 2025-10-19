@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  row-gap: 20px;
+  color: var(--color-black);
+  border-radius: var(--border-radius-l);
+  padding: 30px;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: none;
+  }
+
+  &--row {
+    background-color: var(--color-grey);
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  &--column {
+    flex-direction: column;
+    background-color: var(--color-white);
+    max-width: 450px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: start;
+    column-gap: 10px;
+    user-select: none;
+  }
+
+  &__submit-button {
+    justify-content: center;
+  }
+}
