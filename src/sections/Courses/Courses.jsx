@@ -17,28 +17,11 @@ const Courses = (props) => {
     <Section className="courses container" title={title} isHeaderHidden>
       <Button
         className="courses__filter-button courses__filter-button-- visible-mobile"
-        label="Фильтры"
+        label="Открыть фильтры"
+        iconName='filter'
         extraAttrs={{ "data-js-filter-button": "display" }}
         isLabelHidden
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="courses__icon icon"
-        >
-          <path d="M12 5H2" />
-          <path d="M6 12h12" />
-          <path d="M9 19h6" />
-          <path d="M16 5h6" />
-          <path d="M19 8V2" />
-        </svg>
       </Button>
 
       <nav className="courses__navigation">
@@ -74,56 +57,29 @@ const Courses = (props) => {
           ))}
         </ul>
       </nav>
-      <div className="courses__applied-filters visible-mobile">
+      <ul className="courses__applied-filters visible-mobile">
+        <li className="courses__applied-filters-item" data-js-applied-filter='category'>
+          <span data-js-applied-filter-text=''></span>
+                  <Button
+          className="courses__applied-filters-button"
+          label="Отменить фильтр"
+          iconName='x'
+          isLabelHidden
+          extraAttrs={{ "data-js-applied-filter-button": "" }}
+        />
+        </li>
+        <li className="courses__applied-filters-item" data-js-applied-filter='range'>
+          <span data-js-applied-filter-text=''></span>
         <Button
           className="courses__applied-filters-button"
           label="Отменить фильтр"
+          iconName='x'
           isLabelHidden
-          isAccent
-          extraAttrs={{ "data-js-cancel-selected-button": "category" }}
-        >
-          <span></span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x-icon lucide-x"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </Button>
-        <Button
-          className="courses__applied-filters-button"
-          label="Отменить фильтр"
-          isLabelHidden
-          isAccent
-          extraAttrs={{ "data-js-cancel-selected-button": "range" }}
-        >
-          <span></span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x-icon lucide-x"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </Button>
-      </div>
+          extraAttrs={{ "data-js-applied-filter-button": "" }}
+        />
+        </li>
+
+      </ul>
       <div className="courses__body">
         <Filters className="courses__filters" items={filteredCourseGroups()} />
         <div className="courses__cards">

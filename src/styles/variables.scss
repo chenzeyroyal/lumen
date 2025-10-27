@@ -10,7 +10,11 @@
   --color-grey-04: #2c2c2c;
   --color-red: red;
 
+  // --color-accent: #16bdaf;
   --color-accent: #1791ca;
+
+  // --color-accent-02: #16bdaf13;
+  --color-accent-02: rgba(23, 145, 202, 0.25);
 
   --border-width-l: 4px;
   --border-width-m: 3px;
@@ -25,6 +29,8 @@
   --border-radius-xxxs: 4px;
 
   --shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  --shadow-02: 15px 15px 15px 15px rgba(0, 0, 0, 0.1);
+  --shadow-bottom: 0 0 5px 3px rgba(0, 0, 0, 0.1);
 
   --font-family-base: "Manrope", sans-serif;
 

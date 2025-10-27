@@ -1,11 +1,12 @@
 import "./ReviewCard.scss"
 import Rating from "../Rating"
+import { Image } from "minista"
 const ReviewCard = (props) => {
   const { username, avatar, course, rate, review } = props
 
   return (
     <div className="review-card">
-      <img className="review-card__avatar" src={avatar} alt="" />
+      <Image className="review-card__avatar" src={avatar} alt="Фото пользователя" />
 
       <div className="review-card__body">
         <header className="review-card__header">

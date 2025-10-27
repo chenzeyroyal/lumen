@@ -47,7 +47,7 @@
     display: inline-flex;
     border-radius: var(--border-radius-xl);
     background-color: var(--color-grey);
-    padding: fluid-to-laptop(15, 10);
+    padding: fluid-to-laptop(13, 10);
 
     @include mobile {
       width: 100%;

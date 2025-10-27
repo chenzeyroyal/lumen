@@ -1,9 +1,7 @@
-import Section from "@/layouts/Section"
-import IMAGE_REVIEWS from "@/assets/images/reviews/reviews.png"
-import IMAGE_EMPLOYEE from "@/assets/images/employee.jpg"
-
 import "./Reviews.scss"
+import Section from "@/layouts/Section"
 import ReviewCard from "@/components/ReviewCard"
+import { Image } from "minista"
 
 const Results = () => {
   const ratings = [
@@ -28,7 +26,7 @@ const Results = () => {
   const reviews = [
     {
       username: "Надежда Валюкова",
-      avatar: IMAGE_EMPLOYEE,
+      avatar: 'src/assets/images/people/employee.jpg',
       course: {
         title: "Курс «Frontend-разработчик»",
         href: "/courses/course",
@@ -39,7 +37,8 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-      avatar: IMAGE_EMPLOYEE,
+            avatar: 'src/assets/images/people/employee.jpg',
+
       course: {
         title: "Курс «Frontend-разработчик»",
         href: "/courses/course",
@@ -50,7 +49,8 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-      avatar: IMAGE_EMPLOYEE,
+           avatar: 'src/assets/images/people/employee.jpg',
+
       course: {
         title: "Курс «Frontend-разработчик»",
         href: "/courses/course",
@@ -61,7 +61,8 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-      avatar: IMAGE_EMPLOYEE,
+            avatar: 'src/assets/images/people/employee.jpg',
+
       course: {
         title: "Курс «Frontend-разработчик»",
         href: "/courses/course",
@@ -72,7 +73,8 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-      avatar: IMAGE_EMPLOYEE,
+            avatar: 'src/assets/images/people/employee.jpg',
+
       course: {
         title: "Курс «Frontend-разработчик»",
         href: "/courses/course",
@@ -90,9 +92,9 @@ const Results = () => {
       subtitle="Собрали для Вас честные мнения пользователей lumen - так Вы сможете оценить все плюсы и минусы"
     >
       <Section className="reviews__hero">
-        <img
+        <Image
           className="reviews__image"
-          src={IMAGE_REVIEWS}
+          src='/src/assets/images/reviews/reviews.png'
           alt=""
           width={600}
         />

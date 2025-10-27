@@ -1,6 +1,7 @@
-import Section from "@/layouts/Section"
 import "./Results.scss"
-import IMAGE_FRONTEND from "@/assets/images/frontend.png"
+
+import Section from "@/layouts/Section"
+import { Image } from "minista"
 import Button from "@/components/Button"
 
 const Results = () => {
@@ -40,7 +41,11 @@ const Results = () => {
             isAccent
           />
         </div>
-        <img className="results__hero-image" src={IMAGE_FRONTEND} alt=""></img>
+        <Image
+          className="results__hero-image"
+          src="/src/assets/images/frontend.png"
+          alt=""
+        />
       </section>
       <section className="results__researches">
         <div>

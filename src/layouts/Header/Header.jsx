@@ -16,20 +16,24 @@ const Header = () => {
             className="header__button burger-button"
             title="Каталог"
             label="Каталог"
-            mode='burger'
+            mode="burger"
             extraAttrs={{
               "data-js-cat-button": "",
             }}
             isAccent
-          >
-          </Button>
+          ></Button>
 
           <div className="header__catalog catalog" data-js-cat-menu="">
             <nav className="catalog-nav">
               <ul className="catalog-list">
                 {courseGroups.map(({ title, href, icon }) => (
                   <li className="catalog-item">
-                    <Button className="catalog-link" href={href} label={title} iconName={icon}/>
+                    <Button
+                      className="catalog-link"
+                      href={href}
+                      label={title}
+                      iconName={icon}
+                    />
                   </li>
                 ))}
                 <li className="catalog-item">
@@ -38,9 +42,8 @@ const Header = () => {
                     className="catalog-link"
                     href="/courses"
                     label="Все курсы"
-                    iconName='all'
-                  >
-                  </Button>
+                    iconName="all"
+                  ></Button>
                 </li>
               </ul>
             </nav>

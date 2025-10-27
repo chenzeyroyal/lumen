@@ -21,7 +21,7 @@
     left: 0;
     width: var(--tabsActiveButtonWidth);
     height: calc(100% - var(--tabsNavigationPadding) * 2);
-    background-color: var(--color-black);
+    background-color: var(--color-accent);
     border-radius: var(--border-radius-xl);
     transition-duration: var(--transition-duration);
     translate: var(--tabsActiveButtonOffsetLeft);

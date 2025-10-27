@@ -74,17 +74,24 @@
     display: flex;
     column-gap: 10px;
 
-    &:not(:has(&-button.is-active)) {
-      display: none !important;
+    &:not(:has(&-item.is-active)) {
+      display: none;
     }
 
-    &-button {
+    &-item {
+      display: flex;
+      align-items: center;
+      background-color: var(--color-accent);
+      color: var(--color-white);
       border-radius: var(--border-radius-xl);
+      padding: 3px 10px;
 
       &:not(.is-active) {
         display: none;
       }
+    }
 
+    &-button {
       svg,
       span {
         pointer-events: none;

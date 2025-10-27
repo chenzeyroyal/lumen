@@ -1,35 +1,34 @@
-import IMAGE_EMPLOYEE from "@/assets/images/employee.jpg"
-
 const teamCollection = [
   {
     title: "Александра Никитина",
+    subtitle: "Интернет-маркетолог",
+    image: "/src/assets/images/people/employee.jpg",
+  },
+  {
+    title: "Виталий Абрамов",
     subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
+    image: "/src/assets/images/people/man.jpg",
+  },
+
+  {
+    title: "Александра Никитина",
+    subtitle: "Frontend-разработчик",
+    image: "/src/assets/images/people/employee.jpg",
+  },
+  {
+    title: "Никита Логинов",
+    subtitle: "Backend-разработчик",
+    image: "/src/assets/images/people/man-2.jpg",
   },
   {
     title: "Александра Никитина",
     subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
+    image: "/src/assets/images/people/employee.jpg",
   },
   {
-    title: "Александра Никитина",
+    title: "Виталий Абрамов",
     subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
-  },
-  {
-    title: "Александра Никитина",
-    subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
-  },
-  {
-    title: "Александра Никитина",
-    subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
-  },
-  {
-    title: "Александра Никитина",
-    subtitle: "Frontend-разработчик",
-    image: IMAGE_EMPLOYEE,
+    image: "/src/assets/images/people/man.jpg",
   },
 ]
 

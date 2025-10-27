@@ -1,56 +1,66 @@
 .course-card {
   --padding-y: 10px;
   position: relative;
-  border-radius: var(--border-radius-l);
+  border-radius: var(--border-radius-xl);
   color: var(--color-white);
   width: 100%;
-  height: 400px;
+  height: 375px;
   overflow: hidden;
 
   @include tablet {
     height: 200px;
   }
 
-  &__subtitle {
-    font-weight: 500;
-    padding-top: var(--padding-y);
-  }
-
-  &__body {
-    padding: 20px;
+  &__info {
+    --padding-top: 30%;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-self: end;
+    padding: var(--padding-top) 20px 20px 20px;
     z-index: var(--z-index-under-background);
-  }
 
-  &__footer {
-    margin-top: auto;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(30px);
+      background-color: var(--color-black);
+
+      mask: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: -1;
+    }
   }
 
   &__description {
-    transition: max-height var(--transition-duration-m) ease-in-out,
-      opacity var(--transition-duration-m) ease-in-out;
+    transition: max-height var(--transition-duration-m) ease-in-out;
     max-height: 0;
-    opacity: 0;
+    overflow: hidden;
     padding-top: var(--padding-y);
   }
 
   &__image {
     position: absolute;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    transition: filter var(--transition-duration) ease-in-out;
+    transition: filter var(--transition-duration-m) ease-in-out;
   }
 
   @include tablet-above {
     @include hover {
-      .course-card__description {
-        max-height: 500px;
-        opacity: 1;
-      }
       .course-card__image {
-        filter: blur(5px) brightness(0.7);
+        filter: blur(5px);
+      }
+      .course-card__description {
+        max-height: 100px;
       }
     }
   }

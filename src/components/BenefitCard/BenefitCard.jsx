@@ -1,4 +1,5 @@
 import "./BenefitCard.scss"
+import { Image } from "minista"
 
 const BenefitCard = (props) => {
   const { title, subtitle, image } = props
@@ -10,7 +11,7 @@ const BenefitCard = (props) => {
         <p className="benefit-card__subtitle">{subtitle}</p>
       </div>
 
-      <img className="benefit-card__image" src={image} />
+      <Image className="benefit-card__image" src={image} />
     </div>
   )
 }

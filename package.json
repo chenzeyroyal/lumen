@@ -3,14 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-   "start": "minista",
+    "start": "minista",
     "build": "minista build",
-    "preview": "minista preview"
+    "preview": "minista preview",
+    "build:gh": "cross-env NODE_ENV=production minista build"
   },
   "prettier": {
     "semi": false
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "gh-pages": "^6.3.0",
     "minista": "^3.1.7",
     "postcss-pxtorem": "^6.1.0",
@@ -23,11 +25,5 @@
     "classnames": "^2.5.1",
     "imask": "^7.6.1",
     "swiper": "^11.1.15"
-  },
-  "version": "1.0.0",
-  "main": "minista.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

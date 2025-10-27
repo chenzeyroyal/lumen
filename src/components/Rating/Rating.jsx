@@ -1,7 +1,6 @@
 import "./Rating.scss"
 
-import IMAGE_STARSFILLED from "@/assets/images/rating/stars_filled.svg"
-import IMAGE_STARSUNFILLED from "@/assets/images/rating/stars_unfilled.svg"
+import { Image } from "minista"
 
 const Rating = (props) => {
   const { value = 5, label } = props
@@ -18,19 +17,13 @@ const Rating = (props) => {
       }}
     >
       <div className="rating__stars">
-        <img
+        <Image
           className="rating__stars-unfilled"
-          src={IMAGE_STARSUNFILLED}
-          width={98}
-          height={18}
-          alt=""
+          src="src/assets/images/rating/stars_unfilled.svg"
         />
-        <img
+        <Image
           className="rating__stars-filled"
-          src={IMAGE_STARSFILLED}
-          width={98}
-          height={18}
-          alt=""
+          src="src/assets/images/rating/stars_filled.svg"
         />
       </div>
 

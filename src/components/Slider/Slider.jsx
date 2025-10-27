@@ -18,6 +18,7 @@ const Slider = (props) => {
     navigationTargetElementId = null,
     sliderParams = defaultSliderParams,
     hasPagination = true,
+    hasButtons = true,
   } = props
 
   return (
@@ -41,6 +42,7 @@ const Slider = (props) => {
         <SliderNavigation
           className="slider__navigation"
           hasPagination={hasPagination}
+          hasButtons={hasButtons}
         />
       )}
     </div>

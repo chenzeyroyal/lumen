@@ -1,11 +1,10 @@
-import Section from "@/layouts/Section"
 import "./Hero.scss"
+
+import Section from "@/layouts/Section"
 import Slider from "@/components/Slider"
 import LinkCard from "@/components/LinkCard"
-
-import SLIDE_ONE from "@/assets/images/dark.jpg"
-import DefaultCard from "@/components/DefaultCard"
-import defaultItems from "@/components/DefaultCard/defaultItems"
+import SliderCard from "@/components/SliderCard"
+import sliderItems from "./sliderItems"
 
 const Hero = () => {
   const sliderParams = {
@@ -21,16 +20,16 @@ const Hero = () => {
 
   return (
     <Section className="hero container" title="Главная секция" isHeaderHidden>
-      <div className="hero__grid grid">
-        <div className="grid__column grid__column--large">
-          <div className="grid__content grid__content">
+      <div className="hero__grid">
+        <div className="hero__grid-column hero__grid-column--large">
+          <div className="hero__grid-content">
             <Slider
               className="hero__slider"
-              hasPagination={false}
               sliderParams={{ ...sliderParams }}
+              hasButtons={false}
             >
-              {defaultItems.map((item, index) => (
-                <DefaultCard
+              {sliderItems.map((item, index) => (
+                <SliderCard
                   className="hero__slider-card"
                   {...item}
                   key={index}
@@ -38,44 +37,39 @@ const Hero = () => {
               ))}
             </Slider>
           </div>
-          <div className="grid__content grid__content--side">
+          <div className="hero__grid-content hero__grid-content--side">
             <LinkCard
-              className="grid__content-card"
+              className="hero__grid-card"
               title="Курсы"
-              image={SLIDE_ONE}
               href="/сourses"
             />
 
             <LinkCard
-              className="grid__content-card"
+              className="hero__grid-card"
               title="Контакты"
-              image={SLIDE_ONE}
               href="/contacts"
             />
 
             <LinkCard
-              className="grid__content-card"
+              className="hero__grid-card"
               title="Отзывы"
-              image={SLIDE_ONE}
               href="/reviews"
             />
           </div>
         </div>
-        <div className="grid__column grid__column--small">
-          <div className="grid__content grid__content--side">
-            <LinkCard
-              className="grid__content-card"
-              title="Результаты"
-              image={SLIDE_ONE}
-              href="/results"
-            />
-            <LinkCard
-              className="grid__content-card"
-              title="Войти в IT"
-              image={SLIDE_ONE}
-              href="/courses/code/"
-            />
-          </div>
+        <div className="hero__grid-column hero__grid-column--small">
+          <LinkCard
+            className="hero__grid-card"
+            title="Результаты"
+            image="/src/assets/images/links/results.jpg"
+            href="/results"
+          />
+          <LinkCard
+            className="hero__grid-card"
+            title="Войти в IT"
+            image="/src/assets/images/links/it.png"
+            href="/courses/code/"
+          />
         </div>
       </div>
     </Section>

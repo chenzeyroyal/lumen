@@ -1,9 +1,11 @@
 import { defineConfig } from "minista"
 import path from "path"
 
+const isProd = process.env.NODE_ENV === "production"
+
 export default defineConfig({
   root: "",
-  base: "/",
+  base: isProd ? "/lumen/" : "/",
   public: "public",
   out: "dist",
   assets: {

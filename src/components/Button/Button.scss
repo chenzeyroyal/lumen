@@ -23,9 +23,10 @@
 
   &--circle {
     border-radius: 50%;
-    padding: fluid-to-laptop(10, 5);
+    padding: 5px;
   }
 }
+
 .burger-button {
   @include mobile {
     span {
