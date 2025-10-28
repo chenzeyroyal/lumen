@@ -5,8 +5,7 @@
   "scripts": {
     "start": "minista",
     "build": "minista build",
-    "preview": "minista preview",
-    "build:gh": "cross-env NODE_ENV=production minista build"
+    "preview": "minista preview"
   },
   "prettier": {
     "semi": false
