@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lumen | Главная </title>
+    <script src="/lumen/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/lumen/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__wrapper">
+          <a class="header__logo logo" href="/">
+            <img class="logo__image" src="/logo.png" alt="" width="150" height="60" loading="lazy">
+          </a>
+          <button class="header__button burger-button button button--burger button--accent" type="button" data-js-cat-button="">
+            <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+              <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+              <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+              <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+            </svg><span>Каталог</span>
+          </button>
+          <div class="header__catalog catalog" data-js-cat-menu="">
+            <nav class="catalog-nav">
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/code/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#code"></use>
+                      </svg>
+                    </span><span>Программирование</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/analytic/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#analytic"></use>
+                      </svg>
+                    </span><span>Аналитика</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/games/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#games"></use>
+                      </svg>
+                    </span><span>Игры</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#all"></use>
+                      </svg>
+                    </span><span>Все курсы</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <nav class="header__menu hidden-tablet">
+          <ul class="header__menu-list" data-js-menu-list="">
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/courses"><span>Курсы</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/results"><span>Результаты</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/contacts"><span>Контакты</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/reviews"><span>Отзывы</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="course-details section">
+        <div class="section__body">
+          <div class="course-details__banner banner">
+            <div class="banner__body">
+              <header class="banner__header">
+                <div class="banner__header-top">
+                  <h3 class="banner__type">Курс</h3>
+                  <div class="banner__tag">middle</div>
+                </div>
+                <h1 class="banner__title">JavaScript-разработчик</h1>
+              </header>
+              <div class="banner__description">
+                <p class="banner__subtitle">Освойте JavaScript с нуля и начните карьеру программиста</p>
+                <ul>
+                  <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                  <li>Учитесь на реальных проектах компаний</li>
+                  <li>Познакомьтесь с React, TypeScript и Git</li>
+                </ul>
+              </div>
+            </div>
+            <form class="form form--column" method="">
+              <header class="form__header">
+                <h3 class="form__title">Отправьте заявку, чтобы забронировать место на курсе</h3>
+              </header>
+              <fieldset>
+                <div class="form__field field">
+                  <label class="visually-hidden" for="имя">Имя<!-- --> <span class="field__required-star" aria-hidden="true">*</span></label>
+                  <div class="field__body">
+                    <input class="field__control" id="имя" placeholder="Имя" required="">
+                  </div>
+                </div>
+                <div class="form__field field">
+                  <label class="visually-hidden" for="email">Email<!-- --> <span class="field__required-star" aria-hidden="true">*</span></label>
+                  <div class="field__body">
+                    <input class="field__control" id="email" type="email" placeholder="E-mail" required="">
+                  </div>
+                </div>
+                <div class="form__field field">
+                  <label class="visually-hidden" for="phone-number">Phone Number<!-- --> </label>
+                  <div class="field__body">
+                    <div class="select" data-js-select="">
+                      <label class="select__label visually-hidden" id="phone-number-prefix-label" for="phone-number-prefix">Phone number prefix</label>
+                      <select class="select__original-control field__control" id="phone-number-prefix" tabindex="-1" data-js-select-original-control="">
+                        <option value="+7" selected="">+7</option>
+                        <option value="+1">+1</option>
+                        <option value="+2">+2</option>
+                        <option value="+3">+3</option>
+                      </select>
+                      <div class="select__body">
+                        <div class="select__button field__control" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-controls="phone-number-prefix-dropdown" aria-labelledby="phone-number-prefix-label" tabindex="0" data-js-select-button="">+7</div>
+                        <div class="select__dropdown" id="phone-number-prefix-dropdown" role="listbox" aria-labelledby="phone-number-prefix-label" data-js-select-dropdown="">
+                          <div class="select__option is-selected is-current" id="phone-number-prefix-option-0" role="option" aria-selected="true" data-js-select-option="">+7</div>
+                          <div class="select__option" id="phone-number-prefix-option-1" role="option" aria-selected="false" data-js-select-option="">+1</div>
+                          <div class="select__option" id="phone-number-prefix-option-2" role="option" aria-selected="false" data-js-select-option="">+2</div>
+                          <div class="select__option" id="phone-number-prefix-option-3" role="option" aria-selected="false" data-js-select-option="">+3</div>
+                        </div>
+                      </div>
+                    </div>
+                    <input class="field__control" id="phone-number" placeholder="(999) 999-99-99" inputMode="tel" data-js-input-mask="(000) 000-00-00">
+                  </div>
+                </div>
+                <label class="form__checkbox checkbox" for="я-согласен-на-обработку-персональных-данных">
+                  <input class="checkbox__input" id="я-согласен-на-обработку-персональных-данных" type="checkbox" required=""><span class="checkbox__label">Я согласен на обработку персональных данных</span>
+                </label>
+                <button class="form__submit-button button button--accent" type="submit"><span>Записаться на курс</span></button>
+              </fieldset>
+            </form>
+          </div>
+          <section class="course-details__description container section">
+            <div class="section__body">
+              <div class="course-details__description-body">
+                <div class="course-details__description-text">
+                  <h3 class="course-details__description-title">Фронтендеры создают сайты, которыми мы пользуемся каждый день</h3>
+                  <p class="course-details__description-subtitle">Сайты нужны всем — от районной пекарни и барбершопа до крупного онлайн-банка и «Госуслуг». Поэтому фронтенд-разработчик — одна из самых востребованных профессий в IT.</p>
+                </div>
+                <img class="course-details__description-image" src="/lumen/assets/images/frontend.png">
+              </div>
+            </div>
+          </section>
+          <section class="course-details__benefits container section">
+            <header class="section__header">
+              <div class="section__description">
+                <h2 class="section__title">Преимущества профессии</h2>
+                <p class="section__subtitle"></p>
+              </div>
+              <div class="section__actions">
+                <div class="slider-navigation slider-navigation--circle" id="benefits-slider-navigation" data-js-slider-navigation="">
+                  <button class="slider-navigation__arrow-button slider-navigation__arrow-button--previous  button button--circle button--accent" title="Previous slide" aria-label="Previous slide" type="button" data-js-slider-previous-button=""><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#arrow-left"></use>
+                      </svg>
+                    </span></button>
+                  <button class="slider-navigation__arrow-button slider-navigation__arrow-button--next  button button--circle button--accent" title="Next slide" aria-label="Next slide" type="button" data-js-slider-next-button=""><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#arrow-right"></use>
+                      </svg>
+                    </span></button>
+                </div>
+              </div>
+            </header>
+            <div class="section__body">
+              <div class="course-details__slider slider" data-js-slider="{&quot;sliderParams&quot;:{&quot;slidesPerView&quot;:3.3,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:20,&quot;breakpoints&quot;:{&quot;390&quot;:{&quot;slidesPerView&quot;:1.3,&quot;slidesPerGroup&quot;:2,&quot;spaceBetween&quot;:15},&quot;430&quot;:{&quot;slidesPerView&quot;:1.3,&quot;slidesPerGroup&quot;:2,&quot;spaceBetween&quot;:15},&quot;768&quot;:{&quot;slidesPerView&quot;:2.3,&quot;slidesPerGroup&quot;:3,&quot;spaceBetween&quot;:15},&quot;1024&quot;:{&quot;slidesPerView&quot;:4.3,&quot;slidesPerGroup&quot;:4,&quot;spaceBetween&quot;:20},&quot;1280&quot;:{&quot;slidesPerView&quot;:3.3,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:20}}},&quot;navigationTargetElementId&quot;:&quot;benefits-slider-navigation&quot;}">
+                <div class="slider__swiper swiper" data-js-slider-swiper="">
+                  <ul class="slider__list swiper-wrapper">
+                    <li class="slider__item swiper-slide">
+                      <div class="benefit-card">
+                        <div class="benefit-card__text">
+                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
+                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                        </div>
+                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
+                      </div>
+                    </li>
+                    <li class="slider__item swiper-slide">
+                      <div class="benefit-card">
+                        <div class="benefit-card__text">
+                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
+                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                        </div>
+                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
+                      </div>
+                    </li>
+                    <li class="slider__item swiper-slide">
+                      <div class="benefit-card">
+                        <div class="benefit-card__text">
+                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
+                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                        </div>
+                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
+                      </div>
+                    </li>
+                    <li class="slider__item swiper-slide">
+                      <div class="benefit-card">
+                        <div class="benefit-card__text">
+                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
+                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                        </div>
+                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="course-details__stages container section">
+            <header class="section__header">
+              <div class="section__description">
+                <h2 class="section__title">Программа обучения</h2>
+                <p class="section__subtitle"></p>
+              </div>
+            </header>
+            <div class="section__body">
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>6 тем</li>
+                      <li>2 проекта</li>
+                      <li>6 недель</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">HTML и CSS: лейаут, доступность и интерактив</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Узнаете, как работает компьютер и интернет, познакомитесь с профессией JavaScript-разработчика и основными инструментами.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>8 тем</li>
+                      <li>2 проекта</li>
+                      <li>3 недели</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">Дизайн, адаптивная верстка и декорирование</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Научитесь создавать полноценные адаптивные и анимированные страницы в интерактивном формате.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>16 тем</li>
+                      <li>3 проекта</li>
+                      <li>6 недель</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">Базовый JavaScript</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Научитесь оживлять веб-страницы, сможете настраивать взаимодействие с сервером и создавать простые веб-приложения.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>16 тем</li>
+                      <li>2 проекта</li>
+                      <li>6 недель</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">Продвинутый JavaScript</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Научитесь оживлять веб-страницы, сможете настраивать взаимодействие с сервером и создавать сложные веб-приложения.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>16 тем</li>
+                      <li>2 проекта</li>
+                      <li>6 недель</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">TypeScript и ООП</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Освоите востребованный язык программирования TypeScript, которым пользуется большинство фронтенд-разработчиков.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <details class="accordion__details" name="stage">
+                  <summary class="accordion__summary">
+                    <ul class="accordion__tag-list">
+                      <li>16 тем</li>
+                      <li>2 проекта</li>
+                      <li>6 недель</li>
+                    </ul>
+                    <h3 class="accordion__title"><span role="term">React</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="accordion__arrow">
+                        <path d="m6 9 6 6 6-6"></path>
+                      </svg>
+                    </h3>
+                    <p>Научитесь создавать и тестировать React-компоненты с использованием хуков, сможете строить серьёзные веб-приложения с нуля.</p>
+                  </summary>
+                </details>
+                <div class="accordion__content" role="defenition">
+                  <div class="accordion__content-inner">
+                    <div class="accordion__content-body">
+                      <ul>
+                        <li>Прокачайте навыки и приблизьтесь к уровню middle</li>
+                        <li>Учитесь на реальных проектах компаний</li>
+                        <li>Познакомьтесь с React, TypeScript и Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="course-details__slider container"></section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo" href="/">
+        <img class="logo__image" src="/logo.png" alt="" width="150" height="60" loading="lazy">
+      </a>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Направления</h3>
+        <ul class="footer__category-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/code/">Программирование</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/analytic/">Аналитика</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/games/">Игры</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Курсы</h3>
+        <ul class="footer__program-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Веб-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Нейросети: полный курс</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Графический дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Интернет-маркетинг</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">о lumen</h3>
+        <ul class="footer__menu-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses">Курсы</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/results">Результаты</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/contacts">Контакты</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/reviews">Отзывы</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

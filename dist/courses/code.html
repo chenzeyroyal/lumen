@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lumen | Главная </title>
+    <script src="/lumen/assets/main.js" type="module"></script>
+    <link rel="stylesheet" href="/lumen/assets/bundle.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__wrapper">
+          <a class="header__logo logo" href="/">
+            <img class="logo__image" src="/logo.png" alt="" width="150" height="60" loading="lazy">
+          </a>
+          <button class="header__button burger-button button button--burger button--accent" type="button" data-js-cat-button="">
+            <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+              <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+              <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80"></path>
+              <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+            </svg><span>Каталог</span>
+          </button>
+          <div class="header__catalog catalog" data-js-cat-menu="">
+            <nav class="catalog-nav">
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/code/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#code"></use>
+                      </svg>
+                    </span><span>Программирование</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/analytic/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#analytic"></use>
+                      </svg>
+                    </span><span>Аналитика</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses/games/"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#games"></use>
+                      </svg>
+                    </span><span>Игры</span></a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link button" href="/courses"><span class="button__icon icon">
+                      <svg fill="none" stroke="currentColor">
+                        <use href="/lumen/assets/images/icons.svg#all"></use>
+                      </svg>
+                    </span><span>Все курсы</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <nav class="header__menu hidden-tablet">
+          <ul class="header__menu-list" data-js-menu-list="">
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/courses"><span>Курсы</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/results"><span>Результаты</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/contacts"><span>Контакты</span></a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link button" href="/reviews"><span>Отзывы</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="courses container section">
+        <header class="section__header visually-hidden">
+          <div class="section__description">
+            <h2 class="section__title">Программирование</h2>
+            <p class="section__subtitle"></p>
+          </div>
+        </header>
+        <div class="section__body">
+          <button class="courses__filter-button courses__filter-button-- visible-mobile button" title="Открыть фильтры" aria-label="Открыть фильтры" type="button" data-js-filter-button="display"><span class="button__icon icon">
+              <svg fill="none" stroke="currentColor">
+                <use href="/lumen/assets/images/icons.svg#filter"></use>
+              </svg>
+            </span></button>
+          <nav class="courses__navigation">
+            <ul class="courses__navigation-list" data-js-section-navigation="">
+              <li class="courses__navigation-list-item visible-mobile">
+                <a class="courses__navigation-list-link" href="#" data-js-section-navigation-link="">Программирование</a>
+              </li>
+              <li class="courses__navigation-list-item">
+                <a class="courses__navigation-list-link" href="/courses" data-js-section-navigation-link="">Все курсы</a>
+              </li>
+              <li class="courses__navigation-list-item">
+                <a class="courses__navigation-list-link" href="/courses/code/" data-js-section-navigation-link="">Программирование</a>
+              </li>
+              <li class="courses__navigation-list-item">
+                <a class="courses__navigation-list-link" href="/courses/analytic/" data-js-section-navigation-link="">Аналитика</a>
+              </li>
+              <li class="courses__navigation-list-item">
+                <a class="courses__navigation-list-link" href="/courses/games/" data-js-section-navigation-link="">Игры</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="courses__applied-filters visible-mobile">
+            <li class="courses__applied-filters-item" data-js-applied-filter="category"><span data-js-applied-filter-text=""></span>
+              <button class="courses__applied-filters-button button" title="Отменить фильтр" aria-label="Отменить фильтр" type="button" data-js-applied-filter-button=""><span class="button__icon icon">
+                  <svg fill="none" stroke="currentColor">
+                    <use href="/lumen/assets/images/icons.svg#x"></use>
+                  </svg>
+                </span></button>
+            </li>
+            <li class="courses__applied-filters-item" data-js-applied-filter="range"><span data-js-applied-filter-text=""></span>
+              <button class="courses__applied-filters-button button" title="Отменить фильтр" aria-label="Отменить фильтр" type="button" data-js-applied-filter-button=""><span class="button__icon icon">
+                  <svg fill="none" stroke="currentColor">
+                    <use href="/lumen/assets/images/icons.svg#x"></use>
+                  </svg>
+                </span></button>
+            </li>
+          </ul>
+          <div class="courses__body">
+            <aside class="courses__filters filters" data-js-filters="">
+              <div class="filters__header visible-mobile">
+                <button class="filters__button filters__button--close button" title="Закрыть фильтры" aria-label="Закрыть фильтры" type="button" data-js-filter-button="close"></button>
+              </div>
+              <div class="filters__subcategories" role="radiogroup" aria-labelledby="subcategories-title">
+                <h3 class="filters__title" id="subcategories-title">Направления</h3>
+                <label class="filters__radio-button">
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="Все программы" checked="" value="Все программы"><span>Все программы</span>
+                </label>
+                <label class="filters__radio-button">
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="" value="Фронтенд-разработка"><span>Фронтенд-разработка</span>
+                </label>
+                <label class="filters__radio-button">
+                  <input type="radio" name="subcategory-filters" data-js-radio-button="" value="Бэкенд-разработка"><span>Бэкенд-разработка</span>
+                </label>
+              </div>
+              <div class="filters__range">
+                <header class="filters__range-header">
+                  <h3 class="filters__range-title">Длительность</h3>
+                  <p class="filters__range-subtitle" data-js-range-subtitle=""></p>
+                </header>
+                <div class="filters__range-body"><span>6</span>
+                  <input type="range" data-js-range-slider="" id="range-slider" class="filters__range-slider" min="6" max="24" step="1" value="24"><span>24</span>
+                </div>
+              </div>
+              <div class="filters__buttons visible-mobile">
+                <button class="filters__button filters__button--cancel button" type="button" data-js-filter-button="cancel"><span>Отменить фильтры</span></button>
+                <button class="filters__button filters__button--apply button button--accent" type="button" data-js-filter-button="apply"><span>Принять фильтры</span></button>
+              </div>
+            </aside>
+            <div class="courses__cards">
+              <h3 class="courses__cards-title" data-js-courses-title=""></h3>
+              <ul class="courses__list">
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">12 месяцев</p>
+                      <h3 class="course-card__title">Программист JavaScript</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/frontend.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">10 месяцев</p>
+                      <h3 class="course-card__title">Веб-дизайнер</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/designer.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">6 месяцев</p>
+                      <h3 class="course-card__title">Нейросети: полный курс</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/ai.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;9 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">9 месяцев</p>
+                      <h3 class="course-card__title">Графический дизайнер</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/graphic.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">10 месяцев</p>
+                      <h3 class="course-card__title">Разработчик игр на Unity</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/unity.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Фронтенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">6 месяцев</p>
+                      <h3 class="course-card__title">Интернет-маркетинг</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/marketing.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;12 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">12 месяцев</p>
+                      <h3 class="course-card__title">Программист Python</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/python.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;6 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">6 месяцев</p>
+                      <h3 class="course-card__title">Нейросети: полный курс</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/ai.png">
+                  </a>
+                </li>
+                <li class="courses__list-item" data-js-course-item="{&quot;title&quot;:&quot;Бэкенд-разработка&quot;,&quot;duration&quot;:&quot;10 месяцев&quot;}">
+                  <a class="course-card" href="/courses/course/">
+                    <div class="course-card__info">
+                      <p class="course-card__description">Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов</p>
+                      <p class="course-card__duration">10 месяцев</p>
+                      <h3 class="course-card__title">Разработчик игр на Unity</h3>
+                    </div>
+                    <img class="course-card__image" src="/src/assets/images/courses/unity.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo" href="/">
+        <img class="logo__image" src="/logo.png" alt="" width="150" height="60" loading="lazy">
+      </a>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Направления</h3>
+        <ul class="footer__category-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/code/">Программирование</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/analytic/">Аналитика</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses/games/">Игры</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">Курсы</h3>
+        <ul class="footer__program-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Веб-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Нейросети: полный курс</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Графический дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Интернет-маркетинг</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Специалист 1С</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Программист Python</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/">Бизнес-аналитик</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h3 class="footer__column-title">о lumen</h3>
+        <ul class="footer__menu-list footer__list">
+          <li class="footer__list-item">
+            <a class="footer__link" href="/courses">Курсы</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/results">Результаты</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/contacts">Контакты</a>
+          </li>
+          <li class="footer__list-item">
+            <a class="footer__link" href="/reviews">Отзывы</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
