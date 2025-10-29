@@ -2,7 +2,6 @@ import "./SliderCard.scss"
 
 import Button from "../Button"
 import classNames from "classnames"
-import { Image } from "minista"
 
 const SliderCard = (props) => {
   const { className, title, subtitle, button, image } = props
@@ -24,7 +23,7 @@ const SliderCard = (props) => {
         </div>
       </div>
       <div className="slider-card__image-container">
-        <Image className="slider-card__image" src={image} width={200} />
+        <img className="slider-card__image" src={image} width={200} />
       </div>
     </div>
   )

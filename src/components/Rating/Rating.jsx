@@ -17,11 +17,11 @@ const Rating = (props) => {
       }}
     >
       <div className="rating__stars">
-        <Image
+        <img
           className="rating__stars-unfilled"
           src="src/assets/images/rating/stars_unfilled.svg"
         />
-        <Image
+        <img
           className="rating__stars-filled"
           src="src/assets/images/rating/stars_filled.svg"
         />

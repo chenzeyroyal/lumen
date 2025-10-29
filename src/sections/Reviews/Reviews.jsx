@@ -92,7 +92,7 @@ const Results = () => {
       subtitle="Собрали для Вас честные мнения пользователей lumen - так Вы сможете оценить все плюсы и минусы"
     >
       <Section className="reviews__hero">
-        <Image
+        <img
           className="reviews__image"
           src='/src/assets/images/reviews/reviews.png'
           alt=""

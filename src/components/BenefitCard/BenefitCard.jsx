@@ -11,7 +11,7 @@ const BenefitCard = (props) => {
         <p className="benefit-card__subtitle">{subtitle}</p>
       </div>
 
-      <Image className="benefit-card__image" src={image} />
+      <img className="benefit-card__image" src={image} />
     </div>
   )
 }

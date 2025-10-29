@@ -6,7 +6,7 @@ const ReviewCard = (props) => {
 
   return (
     <div className="review-card">
-      <Image className="review-card__avatar" src={avatar} alt="Фото пользователя" />
+      <img className="review-card__avatar" src={avatar} alt="Фото пользователя" />
 
       <div className="review-card__body">
         <header className="review-card__header">

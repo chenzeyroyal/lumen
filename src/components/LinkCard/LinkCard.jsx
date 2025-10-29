@@ -2,7 +2,6 @@ import "./LinkCard.scss"
 
 import classNames from "classnames"
 import Icon from "../Icon"
-import { Image } from "minista"
 
 const LinkCard = (props) => {
   const { className, title, image, href } = props
@@ -19,7 +18,7 @@ const LinkCard = (props) => {
           </div>
         </footer>
       </div>
-      {image && <Image className="link-card__image" src={image} alt="" />}
+      {image && <img className="link-card__image" src={image} alt="" />}
     </a>
   )
 }

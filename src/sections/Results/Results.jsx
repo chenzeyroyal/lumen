@@ -1,7 +1,6 @@
 import "./Results.scss"
 
 import Section from "@/layouts/Section"
-import { Image } from "minista"
 import Button from "@/components/Button"
 
 const Results = () => {
@@ -41,7 +40,7 @@ const Results = () => {
             isAccent
           />
         </div>
-        <Image
+        <img
           className="results__hero-image"
           src="/src/assets/images/frontend.png"
           alt=""
