@@ -8,7 +8,7 @@ const Logo = (props) => {
     <a className={classNames(className, "logo")} href="/">
       <img
         className="logo__image"
-        src="/logo.png"
+        src="/lumen/logo.png"
         alt=""
         width={150}
         height={60}
