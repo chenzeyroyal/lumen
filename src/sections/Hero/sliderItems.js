@@ -1,12 +1,14 @@
+import slideImage1 from "/src/assets/images/links/books.png"
+
 const sliderItems = [
   {
     title: "Освойте профессию с нуля",
     subtitle: "Приходите учиться сейчас, чтобы уже зимой искать первую работу.",
     button: {
       label: "Начать учиться",
-      href: "/",
+      href: "courses",
     },
-    image: "/src/assets/images/links/books.png",
+    image: slideImage1,
   },
   {
     title: "Индивидуальный подход к каждому",
@@ -14,10 +16,10 @@ const sliderItems = [
 
     button: {
       label: "Начать учиться",
-      href: "/",
+      href: "courses",
     },
 
-    image: "/src/assets/images/links/books.png",
+    image: slideImage1,
   },
 ]
 

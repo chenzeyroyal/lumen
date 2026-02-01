@@ -1,7 +1,9 @@
 import "./Reviews.scss"
 import Section from "@/layouts/Section"
 import ReviewCard from "@/components/ReviewCard"
-import { Image } from "minista"
+
+import employeeImg from "/src/assets/images/people/employee.jpg"
+import reviewsImg from "/src/assets/images/reviews/reviews.png"
 
 const Results = () => {
   const ratings = [
@@ -26,10 +28,10 @@ const Results = () => {
   const reviews = [
     {
       username: "Надежда Валюкова",
-      avatar: 'src/assets/images/people/employee.jpg',
+      avatar: employeeImg,
       course: {
         title: "Курс «Frontend-разработчик»",
-        href: "/courses/course",
+        href: "courses/course",
       },
       rate: 5,
       review:
@@ -37,11 +39,10 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-            avatar: 'src/assets/images/people/employee.jpg',
-
+      avatar: employeeImg,
       course: {
         title: "Курс «Frontend-разработчик»",
-        href: "/courses/course",
+        href: "courses/course",
       },
       rate: 5,
       review:
@@ -49,11 +50,10 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-           avatar: 'src/assets/images/people/employee.jpg',
-
+      avatar: employeeImg,
       course: {
         title: "Курс «Frontend-разработчик»",
-        href: "/courses/course",
+        href: "courses/course",
       },
       rate: 5,
       review:
@@ -61,11 +61,11 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-            avatar: 'src/assets/images/people/employee.jpg',
+      avatar: employeeImg,
 
       course: {
         title: "Курс «Frontend-разработчик»",
-        href: "/courses/course",
+        href: "courses/course",
       },
       rate: 4,
       review:
@@ -73,11 +73,10 @@ const Results = () => {
     },
     {
       username: "Надежда Валюкова",
-            avatar: 'src/assets/images/people/employee.jpg',
-
+      avatar: employeeImg,
       course: {
         title: "Курс «Frontend-разработчик»",
-        href: "/courses/course",
+        href: "courses/course",
       },
       rate: 5,
       review:
@@ -92,12 +91,7 @@ const Results = () => {
       subtitle="Собрали для Вас честные мнения пользователей lumen - так Вы сможете оценить все плюсы и минусы"
     >
       <Section className="reviews__hero">
-        <img
-          className="reviews__image"
-          src='/src/assets/images/reviews/reviews.png'
-          alt=""
-          width={600}
-        />
+        <img className="reviews__image" src={reviewsImg} alt="" width={600} />
         <ul className="reviews__rate-list">
           {ratings.map(({ rate, description }, index) => (
             <li className="reviews__rate-list-item" key={index}>

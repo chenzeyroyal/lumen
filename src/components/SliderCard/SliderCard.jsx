@@ -1,8 +1,8 @@
 import "./SliderCard.scss"
-import { Image } from "minista"
 
 import Button from "../Button"
 import classNames from "classnames"
+import { getDynamicURL } from "@/utils/getDynamicURL"
 
 const SliderCard = (props) => {
   const { className, title, subtitle, button, image } = props
@@ -18,13 +18,18 @@ const SliderCard = (props) => {
           <Button
             className="slider-card__button"
             label={button.label}
-            href={button.href}
+            href={getDynamicURL(button.href)}
             isAccent
           />
         </div>
       </div>
       <div className="slider-card__image-container">
-        <Image className="slider-card__image" src={image} width={200} height={100} />
+        <img
+          className="slider-card__image"
+          src={image}
+          width={200}
+          height={100}
+        />
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import "./Results.scss"
+import resultsImage from "/src/assets/images/results/results.png"
 
 import Section from "@/layouts/Section"
 import Button from "@/components/Button"
@@ -42,12 +43,13 @@ const Results = () => {
         </div>
         <img
           className="results__hero-image"
-          src="/src/assets/images/frontend.png"
+          src={resultsImage}
           alt=""
+          width={500}
         />
       </section>
       <section className="results__researches">
-        <div>
+        <div className="results__researches-block">
           <h4 className="results__researches-title">
             Данные исследования кластера EdTech от РАЭК
           </h4>

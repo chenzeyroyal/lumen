@@ -5,4 +5,10 @@
 
   display: inline-flex;
   stroke-width: 1.5px;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }

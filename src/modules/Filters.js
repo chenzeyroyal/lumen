@@ -45,20 +45,20 @@ class Filters extends BaseComponent {
     if (!this.rootElement) return
 
     this.radioButtons = this.rootElement.querySelectorAll(
-      this.selectors.radioButton
+      this.selectors.radioButton,
     )
     this.rangeSlider = this.rootElement.querySelector(
-      this.selectors.rangeSlider
+      this.selectors.rangeSlider,
     )
     this.rangeSubtitle = document.querySelector(this.selectors.rangeSubtitle)
     this.controlButtons = document.querySelectorAll(
-      this.selectors.controlButton
+      this.selectors.controlButton,
     )
     this.appliedFilters = document.querySelectorAll(
-      this.selectors.appliedFilterContainer
+      this.selectors.appliedFilterContainer,
     )
     this.appliedFiltersButtons = document.querySelectorAll(
-      this.selectors.appliedFilterButton
+      this.selectors.appliedFilterButton,
     )
     this.courseItems = document.querySelectorAll(this.selectors.courseItem)
     this.coursesTitle = document.querySelector(this.selectors.coursesTitle)
@@ -89,46 +89,41 @@ class Filters extends BaseComponent {
 
       this.rangeSlider.style.setProperty(
         this.stateCSSVariables.progress,
-        `${value}%`
+        `${value}%`,
       )
     }
 
     const updateAppliedFilters = () => {
       this.appliedFilters.forEach((container) => {
         const filterType = container.getAttribute(
-          getAttrNameFromSelector(this.selectors.appliedFilterContainer)
+          getAttrNameFromSelector(this.selectors.appliedFilterContainer),
         )
 
-        const isFiltered = this.isFiltered
-        if (!isFiltered) {
-          container.classList.remove(this.stateClasses.isActive)
-          container.querySelector(
-            this.selectors.appliedFilterText
-          ).textContent = ""
-          return
+        const textEl = container.querySelector(this.selectors.appliedFilterText)
+
+        // CATEGORY
+        if (filterType === this.filterTypes.category) {
+          if (this.state.category !== this.initialState.category) {
+            container.classList.add(this.stateClasses.isActive)
+            textEl.textContent = this.state.category
+          } else {
+            container.classList.remove(this.stateClasses.isActive)
+            textEl.textContent = ""
+          }
         }
 
-        if (
-          filterType === this.filterTypes.category &&
-          this.state.category !== this.initialState.category
-        ) {
-          container.querySelector(
-            this.selectors.appliedFilterText
-          ).textContent = this.state.category
-          container.classList.add(this.stateClasses.isActive)
-        }
-
-        if (
-          filterType === this.filterTypes.range &&
-          this.state.duration !== this.initialState.duration
-        ) {
-          container.classList.add(this.stateClasses.isActive)
-          container.querySelector(
-            this.selectors.appliedFilterText
-          ).textContent = getWordFromCount(
-            this.state.duration,
-            this.filterTypes.range
-          )
+        // RANGE
+        if (filterType === this.filterTypes.range) {
+          if (this.state.duration !== this.initialState.duration) {
+            container.classList.add(this.stateClasses.isActive)
+            textEl.textContent = getWordFromCount(
+              this.state.duration,
+              this.filterTypes.range,
+            )
+          } else {
+            container.classList.remove(this.stateClasses.isActive)
+            textEl.textContent = ""
+          }
         }
       })
     }
@@ -136,7 +131,7 @@ class Filters extends BaseComponent {
     const updateTitles = () => {
       this.coursesTitle.textContent = getWordFromCount(
         this.visibleCourses.length,
-        "courses"
+        "courses",
       )
 
       this.rangeSubtitle.textContent = `от ${
@@ -244,17 +239,17 @@ class Filters extends BaseComponent {
     const filterType = e.target
       .closest(this.selectors.appliedFilterContainer)
       .getAttribute(
-        getAttrNameFromSelector(this.selectors.appliedFilterContainer)
+        getAttrNameFromSelector(this.selectors.appliedFilterContainer),
       )
 
     if (filterType === this.filterTypes.category) {
       this.state.category = this.initialState.category
-      e.target.classList.remove(this.stateClasses.isActive)
+      // e.target.classList.remove(this.stateClasses.isActive)
     }
 
     if (filterType === this.filterTypes.range) {
       this.state.duration = this.initialState.duration
-      e.target.classList.remove(this.stateClasses.isActive)
+      // e.target.classList.remove(this.stateClasses.isActive)
     }
   }
 
@@ -274,7 +269,7 @@ class Filters extends BaseComponent {
     this.controlButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
         const action = button.getAttribute(
-          getAttrNameFromSelector(this.selectors.controlButton)
+          getAttrNameFromSelector(this.selectors.controlButton),
         )
         const handler = this.actions[action]
 
@@ -282,7 +277,7 @@ class Filters extends BaseComponent {
       })
     })
     this.appliedFiltersButtons.forEach((button) =>
-      button.addEventListener("click", (e) => this.cancelSelectedFilter(e))
+      button.addEventListener("click", (e) => this.cancelSelectedFilter(e)),
     )
   }
 }

@@ -4,6 +4,7 @@ import Logo from "@/components/Logo"
 import Button from "@/components/Button"
 import menuItems from "./utlis/menuItems"
 import courseGroups from "@/utils/courseGroups"
+import { getDynamicURL } from "@/utils/getDynamicURL"
 
 const Header = () => {
   return (
@@ -30,7 +31,7 @@ const Header = () => {
                   <li className="catalog-item">
                     <Button
                       className="catalog-link"
-                      href={href}
+                      href={getDynamicURL(href)}
                       label={title}
                       iconName={icon}
                     />
@@ -40,7 +41,7 @@ const Header = () => {
                   {" "}
                   <Button
                     className="catalog-link"
-                    href="/courses"
+                    href={getDynamicURL("courses")}
                     label="Все курсы"
                     iconName="all"
                   ></Button>
@@ -56,7 +57,7 @@ const Header = () => {
               <li className="header__menu-item">
                 <Button
                   className="header__menu-link"
-                  href={href}
+                  href={getDynamicURL(href)}
                   label={title}
                   iconPos="right"
                 />

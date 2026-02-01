@@ -5,6 +5,9 @@ import Slider from "@/components/Slider"
 import LinkCard from "@/components/LinkCard"
 import SliderCard from "@/components/SliderCard"
 import sliderItems from "./sliderItems"
+import cardImage1 from "/src/assets/images/links/results.jpg"
+import cardImage2 from "/src/assets/images/links/it.png"
+import { getDynamicURL } from "@/utils/getDynamicURL"
 
 const Hero = () => {
   const sliderParams = {
@@ -14,7 +17,6 @@ const Hero = () => {
     autoplay: {
       delay: 5000,
       pauseOnMouseEnter: true,
-      disableOnInteraction: true,
     },
   }
 
@@ -41,19 +43,19 @@ const Hero = () => {
             <LinkCard
               className="hero__grid-card"
               title="Курсы"
-              href="/сourses"
+              href={getDynamicURL("courses")}
             />
 
             <LinkCard
               className="hero__grid-card"
               title="Контакты"
-              href="/contacts"
+              href={getDynamicURL("contacts")}
             />
 
             <LinkCard
               className="hero__grid-card"
               title="Отзывы"
-              href="/reviews"
+              href={getDynamicURL("reviews")}
             />
           </div>
         </div>
@@ -61,14 +63,14 @@ const Hero = () => {
           <LinkCard
             className="hero__grid-card"
             title="Результаты"
-            image="/src/assets/images/links/results.jpg"
-            href="/results"
+            image={cardImage1}
+            href={getDynamicURL("results")}
           />
           <LinkCard
             className="hero__grid-card"
             title="Войти в IT"
-            image="/src/assets/images/links/it.png"
-            href="/courses/code/"
+            image={cardImage2}
+            href={getDynamicURL("courses/code")}
           />
         </div>
       </div>

@@ -1,3 +1,12 @@
+import pythonImg from "/src/assets/images/courses/python.png"
+import designerImg from "/src/assets/images/courses/designer.png"
+import aiImg from "/src/assets/images/courses/ai.png"
+import graphicImg from "/src/assets/images/courses/graphic.png"
+import unityImg from "/src/assets/images/courses/unity.png"
+import marketingImg from "/src/assets/images/courses/marketing.png"
+import oneCImg from "/src/assets/images/courses/1c.png"
+import analyticImg from "/src/assets/images/courses/analytic.png"
+
 const featuresGroups = [
   {
     title: "Популярное",
@@ -8,48 +17,48 @@ const featuresGroups = [
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/python.png",
+        href: "courses/course",
+        image: pythonImg,
       },
       {
         title: "Веб-дизайнер",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/designer.png",
+        href: "courses/course",
+        image: designerImg,
       },
       {
         title: "Нейросети: полный курс",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/ai.png",
+        href: "courses/course",
+        image: aiImg,
       },
       {
         title: "Графический дизайнер",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/graphic.png",
+        href: "courses/course",
+        image: graphicImg,
       },
       {
         title: "Разработчик игр на Unity",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/unity.png",
+        href: "courses/course",
+        image: unityImg,
       },
       {
         title: "Интернет-маркетинг",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/marketing.png",
+        href: "courses/course",
+        image: marketingImg,
       },
     ],
   },
@@ -63,40 +72,40 @@ const featuresGroups = [
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/1c.png",
+        href: "courses/course",
+        image: oneCImg,
       },
       {
         title: "UI/UX-дизайнер",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/designer.png",
+        href: "courses/course",
+        image: designerImg,
       },
       {
         title: "Программист Python",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/python.png",
+        href: "courses/course",
+        image: pythonImg,
       },
       {
         title: "Разработчик игр на Unity",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/unity.png",
+        href: "courses/course",
+        image: unityImg,
       },
       {
         title: "Бизнес-аналитик",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/analytic.png",
+        href: "courses/course",
+        image: analyticImg,
       },
     ],
   },
@@ -110,8 +119,8 @@ const featuresGroups = [
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/designer.png",
+        href: "courses/course",
+        image: designerImg,
       },
 
       {
@@ -119,24 +128,24 @@ const featuresGroups = [
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/1c.png",
+        href: "courses/course",
+        image: oneCImg,
       },
       {
         title: "Разработчик игр на Unity",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/unity.png",
+        href: "courses/course",
+        image: unityImg,
       },
       {
         title: "Программист Python",
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/python.png",
+        href: "courses/course",
+        image: pythonImg,
       },
 
       {
@@ -144,8 +153,8 @@ const featuresGroups = [
         description:
           "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
         duration: "9 месяцев",
-        href: "/",
-        image: "/src/assets/images/courses/analytic.png",
+        href: "courses/course",
+        image: analyticImg,
       },
     ],
   },

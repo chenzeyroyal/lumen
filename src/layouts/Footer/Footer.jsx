@@ -3,18 +3,19 @@ import courseGroups from "@/utils/courseGroups"
 import menuItems from "../Header/utlis/menuItems"
 import featuresGroups from "@/sections/Features/featuresGroups"
 import Logo from "@/components/Logo"
+import { getDynamicURL } from "@/utils/getDynamicURL"
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <Logo />
+      <Logo mode="light" />
       <div className="footer__column">
         <h3 className="footer__column-title">Направления</h3>
 
         <ul className="footer__category-list footer__list">
           {courseGroups.map(({ title, href }, index) => (
             <li className="footer__list-item" key={index}>
-              <a className="footer__link" href={href}>
+              <a className="footer__link" href={getDynamicURL(href)}>
                 {title}
               </a>
             </li>
@@ -28,7 +29,7 @@ const Footer = () => {
           {featuresGroups.map((group) =>
             group.items.map(({ title, href }) => (
               <li className="footer__list-item">
-                <a className="footer__link" href={href}>
+                <a className="footer__link" href={getDynamicURL(href)}>
                   {title}
                 </a>
               </li>
@@ -41,7 +42,7 @@ const Footer = () => {
         <ul className="footer__menu-list footer__list">
           {menuItems.map(({ title, href }, index) => (
             <li className="footer__list-item" key={index}>
-              <a className="footer__link" href={href}>
+              <a className="footer__link" href={getDynamicURL(href)}>
                 {title}
               </a>
             </li>

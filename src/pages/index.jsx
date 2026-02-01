@@ -3,7 +3,7 @@ import Features from "@/sections/Features"
 import Team from "@/sections/Team"
 
 export const metadata = {
-  title: "Home",
+  title: "Главная",
 }
 
 export default function () {

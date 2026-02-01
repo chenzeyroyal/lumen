@@ -4,6 +4,7 @@ import Section from "@/layouts/Section"
 import courseGroups from "@/utils/courseGroups"
 import Button from "@/components/Button"
 import Filters from "@/components/Filters"
+import { getDynamicURL } from "@/utils/getDynamicURL"
 
 const Courses = (props) => {
   const { title, id } = props
@@ -38,7 +39,7 @@ const Courses = (props) => {
           <li className="courses__navigation-list-item">
             <a
               className="courses__navigation-list-link"
-              href="/courses"
+              href={getDynamicURL("courses")}
               data-js-section-navigation-link=""
             >
               Все курсы
@@ -48,7 +49,7 @@ const Courses = (props) => {
             <li className="courses__navigation-list-item" key={index}>
               <a
                 className="courses__navigation-list-link"
-                href={href}
+                href={getDynamicURL(href)}
                 data-js-section-navigation-link=""
               >
                 {title}

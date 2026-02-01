@@ -1,12 +1,18 @@
 import "./CourseDetails.scss"
 import Section from "@/layouts/Section"
 import Banner from "@/components/Banner"
-import IMAGE_FRONTEND from "@/assets/images/frontend.png"
 import Accordion from "@/components/Accordion"
 import Slider from "@/components/Slider"
 import BenefitCard from "@/components/BenefitCard"
 import SliderNavigation from "@/components/Slider/components/SliderNavigation"
 import Form from "@/components/Form"
+
+
+import detailImage1 from "@/assets/images/course-details/detail-1.png"
+import detailImage2 from "@/assets/images/course-details/detail-2.png"
+import detailImage3 from "@/assets/images/course-details/detail-3.png"
+import detailImage4 from "@/assets/images/course-details/detail-4.png"
+
 
 const CourseDetails = () => {
   const sliderNavigationId = "benefits-slider-navigation"
@@ -91,25 +97,25 @@ const CourseDetails = () => {
       title: "Результаты работы видно сразу",
       subtitle:
         "Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!",
-      image: IMAGE_FRONTEND,
+      image: detailImage1,
     },
     {
-      title: "Результаты работы видно сразу",
+      title: "Востребованность в разных сферах",
       subtitle:
-        "Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!",
-      image: IMAGE_FRONTEND,
+        "Сайты и веб-приложения нужны банкам, телеком-компаниям, частным клиникам и стриминговым сервисам. Вы сами выбираете, в какой сфере работать.",
+      image: detailImage4,
     },
     {
-      title: "Результаты работы видно сразу",
+      title: "Можно работать на удалёнке",
       subtitle:
-        "Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!",
-      image: IMAGE_FRONTEND,
+        "В более 30% вакансий работодатели предлагают работу из дома. Кроме того, фронтендеры востребованы на фрилансе: на биржах каждый день появляются новые задачи.",
+      image: detailImage2,
     },
     {
-      title: "Результаты работы видно сразу",
+      title: "Самые популярные технологии",
       subtitle:
-        "Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!",
-      image: IMAGE_FRONTEND,
+        "По данным Statista, HTML и CSS используют 53% всех разработчиков, а JavaScript — 63%. Ваши навыки будут востребованы в IT.",
+      image: detailImage3,
     },
   ]
 
@@ -177,7 +183,8 @@ const CourseDetails = () => {
           </div>
           <img
             className="course-details__description-image"
-            src={IMAGE_FRONTEND}
+            src={detailImage2}
+            width={500}
           />
         </div>
       </Section>

@@ -16,6 +16,10 @@
     background-color: var(--color-grey);
     flex-direction: row;
     max-width: 1200px;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &--column {

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lumen | Главная </title>
+    <title>lumen | Курс </title>
+    <link rel="icon" href="/lumen/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/lumen/apple-touch-icon.png">
     <script src="/lumen/assets/main.js" type="module"></script>
     <link rel="stylesheet" href="/lumen/assets/bundle.css">
   </head>
@@ -11,8 +13,8 @@
     <header class="header">
       <div class="header__inner container">
         <div class="header__wrapper">
-          <a class="header__logo logo" href="/">
-            <img class="logo__image" src="/lumen/logo.png" alt="" width="150" height="60" loading="lazy">
+          <a class="header__logo logo" href="/lumen/">
+            <img class="logo__image" src="/lumen/logo_black.png" alt="" width="150" height="60" loading="lazy">
           </a>
           <button class="header__button burger-button button button--burger button--accent" type="button" data-js-cat-button="">
             <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
@@ -25,28 +27,28 @@
             <nav class="catalog-nav">
               <ul class="catalog-list">
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="/courses/code/"><span class="button__icon icon">
+                  <a class="catalog-link button" href="/lumen/courses/code"><span class="button__icon icon">
                       <svg fill="none" stroke="currentColor">
                         <use href="/lumen/assets/images/icons.svg#code"></use>
                       </svg>
                     </span><span>Программирование</span></a>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="/courses/analytic/"><span class="button__icon icon">
+                  <a class="catalog-link button" href="/lumen/courses/analytic"><span class="button__icon icon">
                       <svg fill="none" stroke="currentColor">
                         <use href="/lumen/assets/images/icons.svg#analytic"></use>
                       </svg>
                     </span><span>Аналитика</span></a>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="/courses/games/"><span class="button__icon icon">
+                  <a class="catalog-link button" href="/lumen/courses/games"><span class="button__icon icon">
                       <svg fill="none" stroke="currentColor">
                         <use href="/lumen/assets/images/icons.svg#games"></use>
                       </svg>
                     </span><span>Игры</span></a>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-link button" href="/courses"><span class="button__icon icon">
+                  <a class="catalog-link button" href="/lumen/courses"><span class="button__icon icon">
                       <svg fill="none" stroke="currentColor">
                         <use href="/lumen/assets/images/icons.svg#all"></use>
                       </svg>
@@ -59,16 +61,16 @@
         <nav class="header__menu hidden-tablet">
           <ul class="header__menu-list" data-js-menu-list="">
             <li class="header__menu-item">
-              <a class="header__menu-link button" href="/courses"><span>Курсы</span></a>
+              <a class="header__menu-link button" href="/lumen/courses"><span>Курсы</span></a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link button" href="/results"><span>Результаты</span></a>
+              <a class="header__menu-link button" href="/lumen/results"><span>Результаты</span></a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link button" href="/contacts"><span>Контакты</span></a>
+              <a class="header__menu-link button" href="/lumen/contacts"><span>Контакты</span></a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link button" href="/reviews"><span>Отзывы</span></a>
+              <a class="header__menu-link button" href="/lumen/reviews"><span>Отзывы</span></a>
             </li>
           </ul>
         </nav>
@@ -150,7 +152,7 @@
                   <h3 class="course-details__description-title">Фронтендеры создают сайты, которыми мы пользуемся каждый день</h3>
                   <p class="course-details__description-subtitle">Сайты нужны всем — от районной пекарни и барбершопа до крупного онлайн-банка и «Госуслуг». Поэтому фронтенд-разработчик — одна из самых востребованных профессий в IT.</p>
                 </div>
-                <img class="course-details__description-image" src="/lumen/assets/images/frontend.png">
+                <img class="course-details__description-image" src="/lumen/assets/images/detail-2.png" width="500">
               </div>
             </div>
           </section>
@@ -185,34 +187,30 @@
                           <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
                           <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
                         </div>
-                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
                       </div>
                     </li>
                     <li class="slider__item swiper-slide">
                       <div class="benefit-card">
                         <div class="benefit-card__text">
-                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
-                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                          <h3 class="benefit-card__title">Востребованность в разных сферах</h3>
+                          <p class="benefit-card__subtitle">Сайты и веб-приложения нужны банкам, телеком-компаниям, частным клиникам и стриминговым сервисам. Вы сами выбираете, в какой сфере работать.</p>
                         </div>
-                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
                       </div>
                     </li>
                     <li class="slider__item swiper-slide">
                       <div class="benefit-card">
                         <div class="benefit-card__text">
-                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
-                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                          <h3 class="benefit-card__title">Можно работать на удалёнке</h3>
+                          <p class="benefit-card__subtitle">В более 30% вакансий работодатели предлагают работу из дома. Кроме того, фронтендеры востребованы на фрилансе: на биржах каждый день появляются новые задачи.</p>
                         </div>
-                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
                       </div>
                     </li>
                     <li class="slider__item swiper-slide">
                       <div class="benefit-card">
                         <div class="benefit-card__text">
-                          <h3 class="benefit-card__title">Результаты работы видно сразу</h3>
-                          <p class="benefit-card__subtitle">Пишете код - и сразу видите, как изменяется интерфейс сайта. Приятно и наглядно!</p>
+                          <h3 class="benefit-card__title">Самые популярные технологии</h3>
+                          <p class="benefit-card__subtitle">По данным Statista, HTML и CSS используют 53% всех разработчиков, а JavaScript — 63%. Ваши навыки будут востребованы в IT.</p>
                         </div>
-                        <img class="benefit-card__image" src="/lumen/assets/images/frontend.png">
                       </div>
                     </li>
                   </ul>
@@ -403,20 +401,20 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="logo" href="/">
-        <img class="logo__image" src="/lumen/logo.png" alt="" width="150" height="60" loading="lazy">
+      <a class="logo" href="/lumen/">
+        <img class="logo__image" src="/lumen/logo_white.png" alt="" width="150" height="60" loading="lazy">
       </a>
       <div class="footer__column">
         <h3 class="footer__column-title">Направления</h3>
         <ul class="footer__category-list footer__list">
           <li class="footer__list-item">
-            <a class="footer__link" href="/courses/code/">Программирование</a>
+            <a class="footer__link" href="/lumen/courses/code">Программирование</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/courses/analytic/">Аналитика</a>
+            <a class="footer__link" href="/lumen/courses/analytic">Аналитика</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/courses/games/">Игры</a>
+            <a class="footer__link" href="/lumen/courses/games">Игры</a>
           </li>
         </ul>
       </div>
@@ -424,52 +422,52 @@
         <h3 class="footer__column-title">Курсы</h3>
         <ul class="footer__program-list footer__list">
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Программист Python</a>
+            <a class="footer__link" href="/lumen/courses/course">Программист Python</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Веб-дизайнер</a>
+            <a class="footer__link" href="/lumen/courses/course">Веб-дизайнер</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Нейросети: полный курс</a>
+            <a class="footer__link" href="/lumen/courses/course">Нейросети: полный курс</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Графический дизайнер</a>
+            <a class="footer__link" href="/lumen/courses/course">Графический дизайнер</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+            <a class="footer__link" href="/lumen/courses/course">Разработчик игр на Unity</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Интернет-маркетинг</a>
+            <a class="footer__link" href="/lumen/courses/course">Интернет-маркетинг</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Специалист 1С</a>
+            <a class="footer__link" href="/lumen/courses/course">Специалист 1С</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+            <a class="footer__link" href="/lumen/courses/course">UI/UX-дизайнер</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Программист Python</a>
+            <a class="footer__link" href="/lumen/courses/course">Программист Python</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+            <a class="footer__link" href="/lumen/courses/course">Разработчик игр на Unity</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Бизнес-аналитик</a>
+            <a class="footer__link" href="/lumen/courses/course">Бизнес-аналитик</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">UI/UX-дизайнер</a>
+            <a class="footer__link" href="/lumen/courses/course">UI/UX-дизайнер</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Специалист 1С</a>
+            <a class="footer__link" href="/lumen/courses/course">Специалист 1С</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Разработчик игр на Unity</a>
+            <a class="footer__link" href="/lumen/courses/course">Разработчик игр на Unity</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Программист Python</a>
+            <a class="footer__link" href="/lumen/courses/course">Программист Python</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/">Бизнес-аналитик</a>
+            <a class="footer__link" href="/lumen/courses/course">Бизнес-аналитик</a>
           </li>
         </ul>
       </div>
@@ -477,16 +475,16 @@
         <h3 class="footer__column-title">о lumen</h3>
         <ul class="footer__menu-list footer__list">
           <li class="footer__list-item">
-            <a class="footer__link" href="/courses">Курсы</a>
+            <a class="footer__link" href="/lumen/courses">Курсы</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/results">Результаты</a>
+            <a class="footer__link" href="/lumen/results">Результаты</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/contacts">Контакты</a>
+            <a class="footer__link" href="/lumen/contacts">Контакты</a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" href="/reviews">Отзывы</a>
+            <a class="footer__link" href="/lumen/reviews">Отзывы</a>
           </li>
         </ul>
       </div>

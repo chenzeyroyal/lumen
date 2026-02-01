@@ -16,6 +16,7 @@
 
     &-image {
       object-fit: contain;
+      border-radius: var(--border-radius-l);
     }
 
     &-text {

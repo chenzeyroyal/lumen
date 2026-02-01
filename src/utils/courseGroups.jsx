@@ -1,9 +1,20 @@
+import frontendImg from "/src/assets/images/courses/frontend.png"
+import designerImg from "/src/assets/images/courses/designer.png"
+import aiImg from "/src/assets/images/courses/ai.png"
+import graphicImg from "/src/assets/images/courses/graphic.png"
+import unityImg from "/src/assets/images/courses/unity.png"
+import marketingImg from "/src/assets/images/courses/marketing.png"
+import pythonImg from "/src/assets/images/courses/python.png"
+import accountingImg from "/src/assets/images/courses/accounting.png"
+import oneCImg from "/src/assets/images/courses/1c.png"
+import dataImg from "/src/assets/images/courses/data.png"
+
 const courseGroups = [
   {
     title: "Программирование",
-    href: "/courses/code/",
+    href: "courses/code",
     id: "code",
-    icon: 'code',
+    icon: "code",
     isActive: true,
     subCategories: [
       {
@@ -16,9 +27,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "12 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/frontend.png",
-
+            href: "courses/course",
+            image: frontendImg,
           },
           {
             title: "Веб-дизайнер",
@@ -26,9 +36,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "10 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/designer.png",
-
+            href: "courses/course",
+            image: designerImg,
           },
           {
             title: "Нейросети: полный курс",
@@ -36,9 +45,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "6 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/ai.png",
-
+            href: "courses/course",
+            image: aiImg,
           },
           {
             title: "Графический дизайнер",
@@ -46,9 +54,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/graphic.png",
-
+            href: "courses/course",
+            image: graphicImg,
           },
           {
             title: "Разработчик игр на Unity",
@@ -56,9 +63,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "10 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/unity.png",
-
+            href: "courses/course",
+            image: unityImg,
           },
           {
             title: "Интернет-маркетинг",
@@ -66,9 +72,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "6 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/marketing.png",
-
+            href: "courses/course",
+            image: marketingImg,
           },
         ],
       },
@@ -82,9 +87,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "12 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
+            href: "courses/course",
+            image: pythonImg,
           },
           {
             title: "Нейросети: полный курс",
@@ -92,9 +96,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "6 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/ai.png",
-
+            href: "courses/course",
+            image: aiImg,
           },
           {
             title: "Разработчик игр на Unity",
@@ -102,9 +105,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "10 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/unity.png",
-
+            href: "courses/course",
+            image: unityImg,
           },
         ],
       },
@@ -113,11 +115,10 @@ const courseGroups = [
 
   {
     title: "Аналитика",
-    href: "/courses/analytic/",
+    href: "courses/analytic",
     id: "analytic",
-    icon: 'analytic',
+    icon: "analytic",
     isActive: false,
-
     subCategories: [
       {
         title: "Бизнес",
@@ -129,9 +130,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/accounting.png",
-
+            href: "courses/course",
+            image: accountingImg,
           },
           {
             title: "Нейросети: полный курс",
@@ -139,8 +139,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "6 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/ai.png",
+            href: "courses/course",
+            image: aiImg,
           },
         ],
       },
@@ -154,8 +154,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/1c.png",
+            href: "courses/course",
+            image: oneCImg,
           },
           {
             title: "Data-аналитик",
@@ -163,8 +163,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/data.png",
+            href: "courses/course",
+            image: dataImg,
           },
         ],
       },
@@ -173,11 +173,10 @@ const courseGroups = [
 
   {
     title: "Игры",
-    href: "/courses/games/",
+    href: "courses/games",
     id: "games",
-    icon: 'games',
+    icon: "games",
     isActive: false,
-
     subCategories: [
       {
         title: "Unity",
@@ -189,8 +188,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/unity.png",
+            href: "courses/course",
+            image: unityImg,
           },
           {
             title: "Веб-дизайнер",
@@ -198,8 +197,8 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/designer.png",
+            href: "courses/course",
+            image: designerImg,
           },
           {
             title: "Нейросети: полный курс",
@@ -207,95 +206,13 @@ const courseGroups = [
             description:
               "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
             duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/ai.png",
-          },
-          {
-            title: "Графический дизайнер",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/designer.png",
-          },
-          {
-            title: "Разработчик игр на Unity",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/designer.png",
-          },
-          {
-            title: "Интернет-маркетинг",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-            image: "/src/assets/images/courses/marketing.png",
-          },
-        ],
-      },
-      {
-        title: "C++",
-        id: "c-plus",
-        items: [
-          {
-            title: "Веб-дизайнер",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
-          },
-          {
-            title: "Нейросети: полный курс",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
-          },
-          {
-            title: "Графический дизайнер",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
-          },
-          {
-            title: "Разработчик игр на Unity",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
-          },
-          {
-            title: "Интернет-маркетинг",
-            subTitle: "Курс",
-            description:
-              "Глубокое изучение самого популярного языка программирования: станьте разработчиком программ или сайтов",
-            duration: "9 месяцев",
-            href: "/courses/course/",
-                        image: "/src/assets/images/courses/python.png",
-
+            href: "courses/course",
+            image: aiImg,
           },
         ],
       },
     ],
   },
 ]
+
 export default courseGroups

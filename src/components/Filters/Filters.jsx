@@ -15,6 +15,7 @@ const Filters = (props) => {
       <div className="filters__header visible-mobile">
         <Button
           className="filters__button filters__button--close"
+          iconName="x"
           label="Закрыть фильтры"
           extraAttrs={{ "data-js-filter-button": "close" }}
           isLabelHidden

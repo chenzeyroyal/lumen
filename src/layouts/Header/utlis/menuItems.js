@@ -1,19 +1,19 @@
 const menuItems = [
   {
     title: "Курсы",
-    href: "/courses",
+    href: "courses",
   },
   {
     title: "Результаты",
-    href: "/results",
+    href: "results",
   },
   {
     title: "Контакты",
-    href: "/contacts",
+    href: "contacts",
   },
   {
     title: "Отзывы",
-    href: "/reviews",
+    href: "reviews",
   },
 ]
 export default menuItems

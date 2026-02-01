@@ -6,22 +6,26 @@
     "start": "minista",
     "build": "minista build",
     "preview": "minista preview",
+    "copy404": "cpy dist/index.html dist --rename=404.html --flat",
+    "predeploy": "run-s build copy404",
     "deploy": "gh-pages -d dist"
   },
   "prettier": {
     "semi": false
   },
   "devDependencies": {
-    "cross-env": "^10.1.0",
+    "cpy-cli": "^6.0.0",
     "gh-pages": "^6.3.0",
-    "minista": "^3.1.7",
+    "minista": "^3.1.11",
+    "npm-run-all": "^4.1.5",
+    "postcss-preset-env": "^10.1.3",
     "postcss-pxtorem": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.81.0"
   },
   "dependencies": {
-    "@a1rth/css-normalize": "^1.1.9",
+    "@a1rth/css-normalize": "1.1.9",
     "classnames": "^2.5.1",
     "imask": "^7.6.1",
     "swiper": "^11.1.15"
